@@ -3,6 +3,8 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
+    padding-block: var(--section-padding-y);
+    border-bottom: var(--border-s);
 
     @include mobile {
       display: flex;
@@ -88,6 +90,55 @@
       &-text {
         color: var(--color-davys-grey);
       }
+    }
+  }
+
+  &__extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: fluid-to-mobile(80, 20);
+
+    @include mobile-s {
+      flex-direction: column;
+      text-align: center;
+      row-gap: 10px;
+    }
+
+    &-links {
+      display: flex;
+    }
+
+    &-link {
+      font-size: 12px;
+      color: var(--color-davys-grey);
+
+      &:not(:last-child) {
+        align-items: center;
+
+        &::after {
+          content: '•';
+          display: inline-flex;
+          align-items: center;
+          height: 1em;
+          margin-inline: 10px;
+          color: var(--color-davys-grey);
+
+          @include hover {
+            color: var(--color-davys-grey);
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 12px;
+    color: var(--color-davys-grey);
+
+    span {
+      color: var(--color-vermillion);
     }
   }
 }

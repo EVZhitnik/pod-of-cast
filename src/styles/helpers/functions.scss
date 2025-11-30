@@ -6,7 +6,7 @@
     $minViewportWidth: 390;
 
     @if ($isEndOfLaptop) {
-        $minViewportWidth: $container-laptop-width;
+        $minViewportWidth: $container-mobile-width;
     }
 
     $maxSize: math.div($max, 16);
@@ -24,6 +24,6 @@
     );
 }
 
-@function fluid-to-laptop($max: 100, $min: 10) {
+@function fluid-to-mobile($max: 100, $min: 10) {
     @return fluid($max, $min, true);
 }

@@ -1,8 +1,8 @@
-import Logo from '@/components/Logo'
-import './Footer.scss'
-import Socials from '@/components/Socials'
-import Platforms from '@/components/Platforms'
-import AppLinks from '@/components/App'
+import Logo from '@/components/Logo';
+import './Footer.scss';
+import Socials from '@/components/Socials';
+import Platforms from '@/components/Platforms';
+import AppLinks from '@/components/App';
 
 const Footer = () => {
   const itemsMenu = [
@@ -34,7 +34,7 @@ const Footer = () => {
         href: './blog',
       },
     ],
-  ]
+  ];
 
   const itemsSocials = [
     {
@@ -49,7 +49,7 @@ const Footer = () => {
       label: 'Tiktok',
       iconName: 'tiktok',
     },
-  ]
+  ];
 
   const itemsPlatforms = [
     {
@@ -64,7 +64,7 @@ const Footer = () => {
       label: 'YouTube',
       iconName: 'youtube',
     },
-  ]
+  ];
 
   const itemsApp = [
     {
@@ -75,7 +75,9 @@ const Footer = () => {
       label: 'Google Play',
       iconName: 'google-play',
     },
-  ]
+  ];
+
+  const extraLinks = ['Terms', 'Privacy'];
 
   return (
     <footer className='footer'>
@@ -127,7 +129,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer__extra"></div>
+        <div className="footer__extra">
+          <p className="footer__copyright">
+            @ <time datetime="2022">2022</time>. All Rights Reserved. <span>Pod of Cast</span> 
+          </p>
+          <div className="footer__extra-links">
+            {extraLinks.map((link, index) => (
+              <a className="footer__extra-link" href="/" key={index}>{link}</a>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   )

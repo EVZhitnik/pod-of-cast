@@ -1,9 +1,7 @@
 .app {
   &__list {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px 20px;
+    gap: 20px;
   }
 
   &__item {
