@@ -29,13 +29,15 @@
   }
 
   &:has(.button__icon:only-child) {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
     padding: 0;
   }
 
   &--submenu {
     background-color: transparent;
     box-shadow: none;
-    border-radius: none;
     color: var(--color-black);
 
     @include hover {
@@ -72,6 +74,18 @@
       color: var(--color-vermillion);
       background-color: transparent;
       border-color: var(--color-vermillion);
+    }
+  }
+
+  &--soc1als {
+    .button__icon {
+      --iconSize: 24px;
+
+      @include hover {
+        svg {
+          fill: var(--color-vermillion);
+        }
+      }
     }
   }
 }

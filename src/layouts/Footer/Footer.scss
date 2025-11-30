@@ -1,0 +1,93 @@
+.footer {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: 40px;
+    grid-column: 1 / span 3;
+    align-self: start;
+
+    @include tablet {
+      row-gap: 20px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-end;
+      column-gap: 24px;
+    }
+
+    &-year {
+      display: inline-flex;
+      font-size: 12px;
+      color: var(--color-davys-grey);
+    }
+
+    &-description {
+      font-size: 14px;
+      color: var(--color-davys-grey);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    grid-column: 5 / span 3;
+
+    @include mobile {
+      justify-content: stretch;
+    }
+
+    &-column {
+      display: grid;
+      row-gap: 20px;
+      align-self: start;
+    }
+  }
+
+  &__actions {
+    display: grid;
+    row-gap: 60px;
+    grid-column: 9 / -1;
+
+    @include tablet {
+      row-gap: 30px;
+    }
+
+    &-platforms,
+    &-app {
+      display: grid;
+    }
+
+    &-platforms {
+      row-gap: 30px;
+
+      @include tablet {
+        row-gap: 20px;
+      }
+
+      &-text {
+        color: var(--color-davys-grey);
+      }
+    }
+
+    &-app {
+      row-gap: 20px;
+
+      &-text {
+        color: var(--color-davys-grey);
+      }
+    }
+  }
+}

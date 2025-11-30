@@ -1,0 +1,26 @@
+.platforms {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px 38px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    height: 22px;
+
+    @include tablet {
+      height: auto;
+    }
+  }
+}
