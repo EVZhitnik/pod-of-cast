@@ -12,14 +12,13 @@ const IconLink = (props) => {
   } = props;
 
   const sizeMap = {
-    platforms: {width: 122, height: 22},
-    app: {width: 36, height: 36},
+    app: { width: 36, height: 36 },
   };
 
   const { width: defaultWidth, height: defaultHeight } = sizeMap[mode] || {};
 
-  let iconWidth = width || defaultWidth;
-  let iconHeight = height || defaultHeight;
+  const iconWidth = width || defaultWidth;
+  const iconHeight = height || defaultHeight;
 
   return (
     <a
@@ -31,7 +30,7 @@ const IconLink = (props) => {
       <img
         className={`${mode}__image`}
         src={`./src/assets/icons/${iconName}.svg`}
-        alt=""
+        alt={title}
         width={iconWidth}
         height={iconHeight}
         loading={loading}

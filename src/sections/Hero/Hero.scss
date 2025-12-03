@@ -1,0 +1,54 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-champagne);
+  padding-bottom: var(--section-padding-y);
+
+  .platforms__list {
+    gap: 10px 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile-s {
+      flex-direction: column;
+    }
+  }
+
+  .platforms__item {
+    width: fluid(275, 130);
+    height: fluid(84, 50);
+  }
+
+  .platforms__link {
+    height: 36px;
+  }
+
+  @include mobile {
+    min-height: 139px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: fluid(120, 50);
+    }
+  }
+
+  &__platforms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+    padding-block: 20px;
+    border-block: var(--border-m);
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+}

@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer__info-item">
-              <Socials className="footer__soc1als" links={itemsSocials}/>
+              <Socials className="footer__soc1als" mode="soc1als-footer" links={itemsSocials}/>
             </div>
           </div>
           <nav className="footer__menu">
@@ -117,7 +117,7 @@ const Footer = () => {
                   Listen to episodes on your fav platform:
                 </p>
               </div>
-              <Platforms className="footer__platforms-links" links={itemsPlatforms}/>              
+              <Platforms className="footer__platforms-links" mode="footer" links={itemsPlatforms}/>              
             </div>
             <div className="footer__actions-app">
                 <div className="footer__actions-app-text">

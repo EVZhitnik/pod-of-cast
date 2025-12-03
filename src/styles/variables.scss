@@ -20,16 +20,18 @@
     --border-radius-s: 8px;
     --border-radius-xs: 4px;
 
-    --shadow-s: var(--shadow-param-s) var(--shadow-param-s) 0 0 rgba(0, 0, 0, 0.25);
-    --shadow-m-black: var(--shadow-param-m) var(--shadow-param-m) 0 0 rgba(0, 0, 0, 0.25);
-    --shadow-m-vermillion: var(--shadow-param-m) var(--shadow-param-m) 0 0 var(--color-vermillion);
+    --shadow-xs: var(--shadow-param-xs) var(--shadow-param-xs) 0 0 rgba(0, 0, 0, 0.25);
+    --shadow-s-black: var(--shadow-param-s) var(--shadow-param-s) 0 0 rgba(0, 0, 0, 0.25);
+    --shadow-s-vermillion: var(--shadow-param-s) var(--shadow-param-s) 0 0 var(--color-vermillion);
+    --shadow-s-pewter-blue: var(--shadow-param-s) var(--shadow-param-s) 0 0 var(--color-pewter-blue);
+    --shadow-m-black: var(--shadow-param-m) var(--shadow-param-m) 0 0 var(--color-black);
     --shadow-m-pewter-blue: var(--shadow-param-m) var(--shadow-param-m) 0 0 var(--color-pewter-blue);
-    --shadow-l-black: var(--shadow-param-l) var(--shadow-param-l) 0 0 var(--color-black);
-    --shadow-l-pewter-blue: var(--shadow-param-l) var(--shadow-param-l) 0 0 var(--color-pewter-blue);
+    --shadow-l-pewter-blue: var(--shadow-param-s) var(--shadow-param-s) 0 0 var(--color-pewter-blue);
 
-    --shadow-param-l: 10px;
-    --shadow-param-m: 6px;
-    --shadow-param-s: 3px;
+    --shadow-param-l: 12px;
+    --shadow-param-m: 10px;
+    --shadow-param-s: 6px;
+    --shadow-param-xs: 3px;
 
     --font-family-base: 'Montserrat', sans-serif;
 

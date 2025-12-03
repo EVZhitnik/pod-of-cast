@@ -3,15 +3,16 @@
   z-index: 100;
   top: 0;
   width: 100%;
+  background-color: var(--color-champagne);
   padding-block: fluid(24, 14);
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  animation-range: 0 100px;
+  animation-range: 0 150px;
   
   @keyframes scrolling-header {
     to {
-      background-color: var(--color-champagne);
+      background-color: var(--color-pewter-blue);
       padding-block: 10px;
     }
   }

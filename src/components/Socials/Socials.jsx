@@ -5,6 +5,7 @@ import Button from '@/components/Button';
 const Socials = (props) => {
   const {
     className,
+    mode,
     links = [],
   } = props;
 
@@ -16,8 +17,8 @@ const Socials = (props) => {
         {links.map(({ label, iconName }, index) => (
           <li className="soc1als__item" key={index}>
             <Button
-              className="socials__link"
-              mode="soc1als"
+              className="soc1als__link"
+              mode={mode}
               href="/"
               target="_blank"
               label={label}

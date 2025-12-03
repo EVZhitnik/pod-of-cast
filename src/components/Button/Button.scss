@@ -7,7 +7,7 @@
   background-color: var(--color-black);
   border: none;
   border-radius: var(--border-radius-s);
-  box-shadow: var(--shadow-m-black);
+  box-shadow: var(--shadow-s-black);
   text-transform: uppercase;
   padding: fluid-to-mobile(20, 16) fluid-to-mobile(36, 22);
   user-select: none;
@@ -36,24 +36,15 @@
   }
 
   &--submenu {
-    background-color: transparent;
-    box-shadow: none;
-    color: var(--color-black);
+    .button__icon {
+       --iconSize: 16px;
 
-    @include hover {
-      background-color: transparent;
-    }
+      svg {
+        fill: none;
+        stroke: var(--color-black);
 
-    &:has(.button__icon:only-child) {
-      @include square(20px);
-
-      .button__icon {
-        --iconSize: 16px;
-
-          svg {
-            @include hover {
-              stroke: var(--color-vermillion);
-            }
+        @include hover {
+          stroke: var(--color-vermillion);
         }
       }
     }
@@ -77,13 +68,50 @@
     }
   }
 
-  &--soc1als {
-    .button__icon {
-      --iconSize: 24px;
+  &--subscripe {
+    box-shadow: var(--shadow-xs);    
+  }
 
+  &--soc1als {
+    &-base,
+    &-footer {
+      .button__icon {
+        --iconSize: 24px;
+
+        svg {
+          stroke: none;
+
+          @include hover {
+            fill: var(--color-vermillion);
+          }
+        }
+      }
+    }
+
+    &-base {
+      svg {
+        fill: var(--color-white);
+      }
+    }
+
+    &-footer {
+      svg {
+        fill: var(--color-black);
+      }
+    }
+  }
+
+  &--hero-major {
+    padding: fluid-to-mobile(24, 16) fluid-to-mobile(48, 24);
+  }
+
+  &--slider-navigation-btn {
+    color: var(--color-black);
+
+    .button__icon {
       @include hover {
         svg {
-          fill: var(--color-vermillion);
+          stroke: var(--color-vermillion);
         }
       }
     }

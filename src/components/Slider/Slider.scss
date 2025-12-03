@@ -1,0 +1,41 @@
+.slider {
+  &__list {
+    height: 40vh;
+
+    @include mobile-s {
+      height: 33vh;
+    }
+  }
+
+  &__item {
+    &--hero {
+      @include square(373px);
+
+      border-radius: var(--border-radius-m);
+      box-shadow: var(--shadow-l-pewter-blue);
+
+      @include mobile-s {
+        @include square(300px);
+      }
+
+      &:nth-child(1) {
+        background: url('../../assets/images/hero-card/1.jpg') center/cover no-repeat;
+      }
+      &:nth-child(2) {
+        background: url('../../assets/images/hero-card/2.jpg') center/cover no-repeat;
+      }
+      &:nth-child(3) {
+        background: url('../../assets/images/hero-card/3.jpg') center/cover no-repeat;
+      }
+      &:nth-child(4) {
+        background: url('../../assets/images/hero-card/4.jpg') center/cover no-repeat;
+      }
+      &:nth-child(5) {
+        background: url('../../assets/images/hero-card/5.jpg') center/cover no-repeat;
+      }
+      &:nth-child(6) {
+        background: url('../../assets/images/hero-card/6.jpg') center/cover no-repeat;
+      }
+    }
+  }
+}

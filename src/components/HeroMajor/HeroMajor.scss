@@ -1,0 +1,54 @@
+.hero-major {
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: fluid(110, 50);
+
+  &::before {
+    @include abs-position(vertical);
+
+    content: '';
+    left: 0;
+    z-index: 5;
+    width: calc(630 / 1920 * 100%);
+    height: 592px;
+    background: url('../../assets/icons/hero-shape-swirl.svg') left/contain no-repeat;
+
+    @include mobile-s {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include abs-position(vertical);
+
+    content: '';
+    z-index: 5;
+    right: 60px;
+    width: calc(155 / 1920 * 100%);
+    height: 216px;
+    background: url('../../assets/icons/hero-stars.svg') center/contain no-repeat;
+
+    @include mobile-s {
+      display: none;
+    }   
+  }
+
+  &__title {
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__highlight {
+    color: var(--color-vermillion);
+  }
+
+  &__description {
+    position: relative;
+    z-index: 10;
+    color: var(--color-davys-grey);
+
+    &:not(:last-child) {
+      margin-bottom: fluid(70, 30);
+    }
+  }
+}

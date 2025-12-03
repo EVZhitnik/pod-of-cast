@@ -12,6 +12,7 @@ const Button = (props) => {
     label,
     isLabelHidden = false,
     iconName,
+    extraAttrs,
   } = props;
 
   const isLink = href !== undefined;
@@ -28,6 +29,7 @@ const Button = (props) => {
       title={title}
       aria-label={title} 
       {...specificProps}
+      {...extraAttrs}
     >
       {iconComponent && iconComponent}
       {!isLabelHidden && (
