@@ -4,6 +4,8 @@
   background-color: var(--color-champagne);
   padding-bottom: var(--section-padding-y);
 
+  @include scribble-icon;
+
   .platforms__list {
     gap: 10px 20px;
 

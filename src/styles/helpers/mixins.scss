@@ -1,4 +1,5 @@
 @use 'functions' as *;
+@use 'media' as *;
 @use 'sass:math';
 
 @mixin fluid-text($max: 48, $min: 16) {
@@ -69,4 +70,33 @@
     outline: 2px dashed var(--color-white);
     outline-offset: 4px;
     transition-duration: 0s !important;
+}
+
+@mixin scribble-icon($variant: 'vermillion') {
+  &::after {
+    --scribbleVermillionIconBackground: url('../../assets/icons/scribble-vermillion.svg');
+    --scribbleBlackIconBackground: url('../../assets/icons/scribble-black.svg');
+    
+    $selected-variable: if(
+      $variant == black, 
+      '--scribbleBlackIconBackground', 
+      '--scribbleVermillionIconBackground'
+    );
+
+    @include abs-position(horizontal);
+
+    content: '';
+    bottom: -75px;
+    width: fluid(150, 75);
+    height: fluid(150, 75);
+    background: var(#{$selected-variable}) center/contain no-repeat;
+
+    @include mobile {
+      bottom: -60px;
+    }
+
+    @include mobile-s {
+      bottom: -40px;
+    }
+  }
 }
