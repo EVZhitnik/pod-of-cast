@@ -17,7 +17,9 @@
 
   &__item {
     display: flex;
-    height: 22px;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
 
     @include tablet {
       height: auto;

@@ -6,10 +6,20 @@ const App = (props) => {
   const {
     className,
     links = [],
+    variant = 'default',
   } = props;
 
+  const sizeConfig = {
+    default: {
+      'app-store': { width: 36, height: 36 },
+      'google-play': { width: 36, height: 36 },
+    },
+  };
+
+  const currentSizes = sizeConfig[variant] || sizeConfig.default;
+
   return (
-    <div className={classNames(className, 'app')}>
+    <div className={classNames(className, 'app', `app--${variant}`)}>
       <ul className="app__list">
         {links.map(({ label, iconName }, index) => (
           <li className="app__item" key={index}>
@@ -18,6 +28,8 @@ const App = (props) => {
               mode="app"
               title={label}
               iconName={iconName}
+              width={currentSizes[iconName]?.width}
+              height={currentSizes[iconName]?.height}
             />
           </li>
         ))}

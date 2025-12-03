@@ -1,0 +1,17 @@
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  
+  &__soc1als {
+    margin-left: auto;
+  }
+
+  &__title {
+    letter-spacing: -0.08em;
+    color: var(--color-pewter-blue);
+    text-align: left;
+  }
+}
