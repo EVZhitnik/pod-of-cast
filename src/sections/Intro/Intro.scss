@@ -1,0 +1,27 @@
+.intro {
+  &__illustration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: fluid(120, 50)
+    }
+
+    &-column {
+      display: grid;
+      justify-items: center;
+      row-gap: 40px;
+    }
+
+    &-description {
+      max-width: 472px;
+      text-align: center;
+    }
+  }
+}

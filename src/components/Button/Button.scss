@@ -116,4 +116,24 @@
       }
     }
   }
+
+  &--quote {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+
+    @include hover {
+      background-color: transparent;
+    }
+
+    .button__icon {
+      --iconSize: 16px;
+
+      svg {
+        fill: #1ED760;
+        stroke: var(--color-black);
+      }
+    }
+  }
 }
