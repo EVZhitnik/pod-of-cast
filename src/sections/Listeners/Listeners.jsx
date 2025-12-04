@@ -10,42 +10,42 @@ const Listeners = () => {
       image: './src/assets/images/person/2.jpg',
       personName: 'Luna lovegood,',
       platformIconName: 'spotify-quote',
-      department: 'Spotify',
+      platform: 'Spotify',
     },
     {
       blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
       image: './src/assets/images/person/3.jpg',
       personName: 'Emily Blunt,',
       platformIconName: 'google-podcast-listeners',
-      department: 'Google Podcast',
+      platform: 'Google Podcast',
     },
     {
       blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
       image: './src/assets/images/person/4.jpg',
       personName: 'Mia Winters,',
       platformIconName: 'apple-podcast-listeners',
-      department: 'Apple Podcast',
+      platform: 'Apple Podcast',
     },
     {
       blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
       image: './src/assets/images/person/2.jpg',
       personName: 'Luna lovegood,',
       platformIconName: 'spotify-quote',
-      department: 'Spotify',
+      platform: 'Spotify',
     },
     {
       blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
       image: './src/assets/images/person/3.jpg',
       personName: 'Emily Blunt,',
       platformIconName: 'google-podcast-listeners',
-      department: 'Google Podcast',
+      platform: 'Google Podcast',
     },
     {
       blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
       image: './src/assets/images/person/4.jpg',
       personName: 'Mia Winters,',
       platformIconName: 'apple-podcast-listeners',
-      department: 'Apple Podcast',
+      platform: 'Apple Podcast',
     },
   ];
   
@@ -59,7 +59,12 @@ const Listeners = () => {
     >
       <Slider mode="listeners">
         {quoteItems.map((quoteData, index) => (
-          <Quote className="listeners__quote" quote={quoteData} key={index} />
+          <Quote 
+            className="listeners__quote"
+            mode="listeners" 
+            quote={quoteData} 
+            key={index} 
+        />
         ))}
       </Slider>
     </Section>

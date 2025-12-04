@@ -10,7 +10,7 @@ const Intro = () => {
       image: './src/assets/images/person/1.jpg',
       personName: 'John Smith,',
       platformIconName: 'spotify-quote',
-      department: 'Social Community Manager',
+      platform: 'Social Community Manager',
     }
   ];
 

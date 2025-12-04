@@ -1,11 +1,36 @@
 .quote {
-  text-align: left;
+  &__hooks {
+    @include fluid-text(96, 36);
+    
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--color-vermillion);
+  }
+
+  &__author {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &-image {
+      border-radius: 50%;
+    }
+
+    &-name {
+      font-size: 14px;
+    }
+
+    &-platform {
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
 
   &--intro {
+    @include flex-center;
+
     position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     background-color: var(--color-champagne);
     border-radius: var(--border-radius-s);
     padding-block: fluid(40, 20);
@@ -60,39 +85,15 @@
     }
   }
 
-  &__blockquote {
-    @include fluid-text(22, 16);
-    
-    &:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
+  &--listeners {
+    text-align: left;
 
-  &__hooks {
-    @include fluid-text(96, 36);
-    
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--color-vermillion);
-  }
-
-  &__author {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 10px;
-
-    &-image {
-      border-radius: 50%;
-    }
-
-    &-name {
-      font-size: 14px;
-    }
-
-    &-department {
-      font-weight: 700;
-      font-size: 14px;
+    .quote__blockquote {
+      @include fluid-text(22, 16);
+      
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
   }
 }

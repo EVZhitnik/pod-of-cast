@@ -7,10 +7,14 @@ const Quote = (props) => {
   const {
     className,
     mode = '',
-    quote,
+    quote = {},
   } = props;
 
-  const { blockquote, image, personName, platformIconName, department } = quote;
+  if (!quote || Object.keys(quote).length === 0) {
+    return null;
+  }
+
+  const { blockquote, image, personName, platformIconName, platform } = quote;
 
   return (
     <div className={classNames(className, 'quote', {[`quote--${mode}`]: mode})}>
@@ -18,17 +22,21 @@ const Quote = (props) => {
         <span className="quote__hooks">“</span>
         <blockquote className="quote__blockquote">{blockquote}</blockquote>
         <div className="quote__author">
-          <Image className='quote__author-image' src={image} />
+          <Image 
+            className='quote__author-image' 
+            src={image} 
+            alt={`Portrait of ${personName}`}
+          />
           <span className="quote__author-name">{personName}</span>
           <Button 
-            className="quote__author-link-spotify" 
+            className="quote__author-link" 
             href='/'
             mode={platformIconName} 
-            label="Spotify"
+            label={platform}
             isLabelHidden  
             iconName={platformIconName}
           />
-          <span className="quote__author-department">{department}</span>
+          <span className="quote__author-platform">{platform}</span>
         </div>
       </div>
     </div>
