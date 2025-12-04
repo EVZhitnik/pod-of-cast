@@ -87,6 +87,7 @@
 
     content: '';
     bottom: -75px;
+    z-index: 20;
     width: fluid(150, 75);
     height: fluid(150, 75);
     background: var(#{$selected-variable}) center/contain no-repeat;

@@ -4,6 +4,7 @@ import './Section.scss';
 const Section = (props) => {
   const {
     className,
+    isContainer = true,
     title,
     titleId,
     modeTitle = '',
@@ -11,9 +12,11 @@ const Section = (props) => {
     children,
   } = props;
 
+  const container = isContainer ? 'container' : '';
+
   return (
     <section 
-      className={classNames(className, 'section container')}
+      className={classNames(className, 'section', container)}
       aria-label={titleId}
     >
       <header className="section__header">
