@@ -1,7 +1,11 @@
 .section {
+  text-align: center;
   padding-block: var(--section-padding-y);
 
   &__header {
+    display: grid;
+    row-gap: 20px;
+
     &:not(:last-child) {
       margin-bottom: fluid(100, 50);
     }
@@ -12,5 +16,10 @@
       max-width: 735px;
       margin: 0 auto;
     }
+  }
+  
+  &__description {
+    font-size: 22px;
+    color: var(--color-davys-grey);
   }
 }

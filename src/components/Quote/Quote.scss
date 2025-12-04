@@ -1,4 +1,6 @@
 .quote {
+  text-align: left;
+
   &--intro {
     position: relative;
     display: flex;
@@ -52,11 +54,23 @@
         margin-bottom: 40px;
       }
     }
+
+    .quote__author {
+      justify-content: center;
+    }
+  }
+
+  &__blockquote {
+    @include fluid-text(22, 16);
+    
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 
   &__hooks {
     @include fluid-text(96, 36);
-
+    
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.02em;
@@ -74,11 +88,6 @@
 
     &-name {
       font-size: 14px;
-    }
-
-    &-icon {
-      @include square(16px);
-
     }
 
     &-department {

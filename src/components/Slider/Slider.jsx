@@ -2,7 +2,7 @@ import 'swiper/css';
 import './Slider.scss';
 import SliderNavigation from './components/SliderNavigation';
 
-const defaultSliderParams = {
+const heroSliderParams = {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 800,
@@ -34,13 +34,45 @@ const defaultSliderParams = {
   },
 };
 
+const listenersSliderParams = {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  speed: 1000,
+  allowTouchMove: true,
+  autoplay: {
+    delay: 3000,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      autoplay: {
+        delay: 3000,
+      }
+    },
+    768: {
+      slidesPerView: 1,
+      autoplay: { 
+        delay: 3000,
+      },
+    },
+    1440: {
+      slidesPerView: 3,
+      autoplay: {
+        delay: 3000,
+      },
+      allowTouchMove: false,
+    }
+  },
+}
+
 const Slider = (props) => {
   const {
     children,
-    mode = false,
+    mode = '',
     hasNavigation = true,
     navigationTargetElementId = null,
-    sliderParams = defaultSliderParams,
+    sliderParams = mode === 'hero' ? heroSliderParams : listenersSliderParams,
   } = props;
 
   const modSliderItem = mode ? `slider__item--${mode}` : '';

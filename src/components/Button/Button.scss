@@ -23,8 +23,7 @@
   }
 
   &:disabled {
-    color: var(--color-white);
-    background-color: var(--color-pewter-blue);
+    color: var(--color-davys-grey);
     pointer-events: none;
   }
 
@@ -117,12 +116,7 @@
     }
   }
 
-  &--quote {
-    background-color: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-
+  &--spotify-quote {
     @include hover {
       background-color: transparent;
     }
@@ -133,6 +127,22 @@
       svg {
         fill: #1ED760;
         stroke: var(--color-black);
+      }
+    }
+  }
+
+  &--google-podcast-listeners,
+  &--apple-podcast-listeners {
+    @include hover {
+      background-color: transparent;
+    }
+
+    .button__icon {
+      --iconSize: 16px;
+
+      svg {
+        fill: var(--color-black);
+        stroke: none;
       }
     }
   }

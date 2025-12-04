@@ -4,12 +4,12 @@ import { Image } from 'minista';
 import Quote from '@/components/Quote';
 
 const Intro = () => {
-  const itemsQuote = [
+  const quoteItems = [
     {
       blockquote: <>One of the best daily podcasts that <br />covers every topic on Spotify.</>,
       image: './src/assets/images/person/1.jpg',
       personName: 'John Smith,',
-      platformIconName: 'spotify',
+      platformIconName: 'spotify-quote',
       department: 'Social Community Manager',
     }
   ];
@@ -39,11 +39,10 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <Quote 
-        className="intro__quote"
-        mode="intro"
-        itemsQuote={itemsQuote}
-      />
+      {quoteItems.map((quoteData, index) => (
+        <Quote className="intro__quote" mode="intro" quote={quoteData} key={index} />
+      ))}
+
     </Section>
   );
 };

@@ -1,4 +1,6 @@
 .intro {
+  @include scribble-icon(black);
+  
   &__illustration {
     display: flex;
     justify-content: space-between;

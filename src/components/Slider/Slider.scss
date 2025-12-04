@@ -1,6 +1,16 @@
 .slider {
+  &__swiper {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include mobile-s {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
   &__list {
-    height: 40vh;
+    height: 380px;
 
     @include mobile-s {
       height: 33vh;
@@ -35,6 +45,22 @@
       }
       &:nth-child(6) {
         background: url('../../assets/images/hero-card/6.jpg') center/cover no-repeat;
+      }
+    }
+
+    &--listeners {
+      width: 570px !important;
+      height: fluid(360, 270);
+      background-color: var(--color-white);
+      border-radius: var(--border-radius-s);
+      padding: 40px;
+
+      @include mobile {
+        padding: 20px;
+      }
+
+      @include mobile-s {
+        width: 100% !important;
       }
     }
   }
