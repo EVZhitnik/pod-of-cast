@@ -1,0 +1,42 @@
+.benefits {
+  @include scribble-icon(black);
+  
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: fluid(80, 50) 20px;
+    margin-bottom: fluid(100, 50);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    display: inline-flex;
+    margin-bottom: 30px;
+
+    @include mobile-s {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    max-width: 338px;
+
+    @include mobile-s {
+      width: 100%;
+    }
+  }
+}

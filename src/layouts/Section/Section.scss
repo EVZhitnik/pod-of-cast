@@ -12,9 +12,40 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 10;
+    
     &--intro {
       max-width: 735px;
       margin: 0 auto;
+    }
+
+    &--benefits {
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        top: -50px;
+        right: 185px;
+        width: fluid(195, 50);
+        height: fluid(92, 50);
+        background: url('../../assets/icons/benefits-title-icon.svg') center/contain no-repeat;
+
+        @include laptop {
+          top: -90px;
+          left: 50%;
+          transform: translateX(-50%);
+          rotate: 345deg;
+        }
+
+        @include tablet {
+          top: -80px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
     }
   }
   
