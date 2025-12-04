@@ -14,10 +14,32 @@
   &__title {
     position: relative;
     z-index: 10;
+    max-width: fit-content;
+    margin: 0 auto;
     
     &--intro {
       max-width: 735px;
-      margin: 0 auto;
+    }
+
+    &--listeners {
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        top: -69px;
+        left: -99px;
+        width: fluid(105, 50);
+        height: fluid(105, 50);
+        background: url('../../assets/icons/intro-title-icon.svg') center/contain no-repeat;
+
+        @include tablet {
+          left: -80px;          
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }      
     }
 
     &--benefits {
@@ -26,7 +48,7 @@
         position: absolute;
         z-index: 5;
         top: -50px;
-        right: 185px;
+        right: -65px;
         width: fluid(195, 50);
         height: fluid(92, 50);
         background: url('../../assets/icons/benefits-title-icon.svg') center/contain no-repeat;

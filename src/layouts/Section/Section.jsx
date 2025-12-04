@@ -12,16 +12,18 @@ const Section = (props) => {
     children,
   } = props;
 
-  const container = isContainer ? 'container' : '';
-
   return (
     <section 
-      className={classNames(className, 'section', container)}
+      className={classNames(className, 'section', {
+        'container': isContainer,
+      })}
       aria-label={titleId}
     >
       <header className="section__header">
         <h2 
-          className={`section__title section__title--${modeTitle}`}
+          className={classNames('section__title', {
+            [`section__title--${modeTitle}`]: modeTitle,
+          })}
           id={titleId}
         >
           {title}

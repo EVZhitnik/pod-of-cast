@@ -55,6 +55,7 @@ const Listeners = () => {
       isContainer={false}
       title="What our listeners say"
       titleId="listeners-title"
+      modeTitle="listeners"
       description="Their experience throughout every platform"
     >
       <Slider mode="listeners">
