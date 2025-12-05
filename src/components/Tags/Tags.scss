@@ -1,0 +1,20 @@
+.tags {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__item {
+    @include flex-center;
+
+    border: var(--border-s);
+    border-radius: var(--border-radius-xs);
+  }
+
+  &__text {
+    font-size: 12px;
+    color: var(--color-davys-grey);
+    padding: 6px 10px;
+  }
+}
