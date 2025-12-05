@@ -4,7 +4,7 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
     padding-block: var(--section-padding-y);
-    border-bottom: var(--border-s);
+    border-bottom: var(--border-xs);
 
     @include mobile {
       display: flex;

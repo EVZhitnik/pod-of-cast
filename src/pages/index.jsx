@@ -1,4 +1,5 @@
 import Benefits from "@/sections/Benefits"
+import Episodes from "@/sections/Episodes"
 import Hero from "@/sections/Hero"
 import Intro from "@/sections/Intro"
 import Listeners from "@/sections/Listeners"
@@ -14,6 +15,7 @@ export default () => {
       <Intro />
       <Listeners />
       <Benefits />
+      <Episodes />
     </>
   )
 }

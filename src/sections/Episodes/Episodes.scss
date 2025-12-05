@@ -1,0 +1,19 @@
+.episodes {
+  background-color: var(--color-champagne);
+
+  @include scribble-icon(black);
+
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+}

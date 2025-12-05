@@ -1,0 +1,126 @@
+.episodes-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    'image content content'
+    'tags tags hosted'
+  ;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-white);
+  border: var(--border-l);
+  border-radius: var(--border-radius-m);
+  padding: 16px;
+
+  @include tablet {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+      'image content'
+      'tags hosted'
+    ;    
+  }
+
+  @include mobile-s {
+    grid-template-areas: 
+      'image image'
+      'content content'
+      'tags hosted'
+    ; 
+  }
+
+  &:nth-child(1),
+  &:nth-child(4),
+  &:nth-child(5) {
+    box-shadow: var(--shadow-m-pewter-blue);
+  }
+
+  &__image {
+    position: relative;
+    grid-area: image;
+
+    img {
+      border-radius: var(--border-radius-s);
+    }
+  }
+
+  &__soc1als {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+
+    .soc1als__list {
+      gap: 6px;
+    }
+
+    .soc1als__link {
+      .button__icon {
+        --iconSize: 16px;
+      }
+    }
+  }
+  
+  &__content {
+    text-align: left;
+    grid-area: content;
+  }
+
+  &__eps {
+    font-weight: 700;
+    color: var(--color-vermillion);
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: var(--border-xs);
+  }
+
+  &__description {
+    font-size: 14px;
+    color: var(--color-davys-grey);
+    padding-top: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tags {
+    grid-area: tags;
+  }
+
+  &__hosted {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 10px;
+    grid-area: hosted;
+
+    &-text {
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--color-davys-grey);
+    }
+
+    &-images {
+      display: flex;
+    }
+
+    &-image {
+      border-radius: 100%;
+      border: var(--border-width-l) solid var(--color-white);
+
+      &:nth-child(2) {
+        position: relative;
+        top: 0;
+        right: 8px;
+      }
+    }
+  }
+}

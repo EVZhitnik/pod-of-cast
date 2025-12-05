@@ -7,13 +7,16 @@
     --color-champagne: #F7EDE8;
     --color-alice-blue: #EDF3F7;
 
+    --border-xs: var(--border-width-xs) solid var(--color-davys-grey);
     --border-s: var(--border-width-s) solid var(--color-davys-grey);
-    --border-m: var(--border-width-m) solid var(--color-davys-grey);
+    --border-m-grey: var(--border-width-m) solid var(--color-davys-grey);
+    --border-m-black: var(--border-width-m) solid var(--color-black);
     --border-l: var(--border-width-l) solid var(--color-black);
 
     --border-width-l: 2px;
     --border-width-m: 1.5px;
-    --border-width-s: 0.5px;
+    --border-width-s: 1px;
+    --border-width-xs: 0.5px;
 
     --border-radius-l: 16px;
     --border-radius-m: 12px;
