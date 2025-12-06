@@ -69,6 +69,22 @@
         }
       }
     }
+
+    &--sponsor {
+      &::before {
+        content: '';
+        position: absolute;
+        top: -33px;
+        left: -45px;
+        width: 62px;
+        height: 60px;
+        background: url('../../assets/icons/sponsor-title-icon.svg') center/contain no-repeat;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
   }
   
   &__description {

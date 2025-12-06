@@ -1,0 +1,147 @@
+.sponsor {
+  @include scribble-icon(black);
+
+  &__card {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-card {
+    display: grid;
+    row-gap: 20px;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      .sponsor-card__price,
+      .sponsor-card__benefits {
+        background-color: var(--color-champagne);
+        border-color: var(--color-vermillion);
+      }
+    }
+
+    &__price,
+    &__benefits {
+      border: var(--border-m-black);
+      border-radius: var(--border-radius-s);
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      height: 357px;
+      padding: fluid(60, 20) fluid(40, 20) fluid(30, 20);
+
+      @include mobile {
+        row-gap: 20px;
+        height: auto;
+      }
+
+      &-text {
+        display: grid;
+        row-gap: 20px;
+      }
+
+      &-wrapper-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 16px;
+      }
+
+      &-title {
+        text-align: left;
+      }
+
+      &-description {
+        font-size: 14px;
+        color: var(--color-davys-grey)
+      }
+
+      &-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        @include tablet {
+          flex-direction: column;
+        }
+
+        @include mobile {
+          flex-direction: row;
+          justify-content: flex-start;
+          column-gap: 30px;
+        }
+      }
+
+      &-value {
+        display: grid;
+      }
+
+      &-amount {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+        color: var(--color-vermillion);
+      }
+
+      &-period {
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--color-davys-grey);
+        letter-spacing: -0.02em;
+      }
+    }
+    
+    &__benefits {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      row-gap: 20px;
+      padding: fluid-to-mobile(40, 20);
+      height: clamp(312px, 87.88vh, 355px);
+
+      @include mobile {
+        height: auto;
+      }
+
+      &-subtitle {
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--color-davys-grey);       
+      }
+
+      &-list {
+        display: grid;
+        row-gap: 10px;
+      }
+
+      &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 7px;
+
+        &::before {
+          @include square(3px);
+          @include abs-position(vertical);
+
+          content: '';
+          position: absolute;
+          left: 0;
+          background-color: var(--color-black);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
