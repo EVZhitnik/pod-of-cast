@@ -73,7 +73,8 @@
 
   &--soc1als {
     &-base,
-    &-footer {
+    &-footer,
+    &-pod {
       .button__icon {
         --iconSize: 24px;
 
@@ -93,7 +94,8 @@
       }
     }
 
-    &-footer {
+    &-footer,
+    &-pod {
       svg {
         fill: var(--color-black);
       }

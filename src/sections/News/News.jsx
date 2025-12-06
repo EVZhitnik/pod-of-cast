@@ -25,6 +25,7 @@ const News = () => {
 
   return (
     <Section
+      className="news"
       title="Article and News"
       titleId="news-title"
       description="News, tips, tricks and more"

@@ -1,0 +1,64 @@
+.pod {
+  position: relative;
+  background-color: var(--color-alice-blue);
+  padding-inline: 16px;
+  border-bottom: var(--border-m-grey);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 289px;
+    left: -96px;
+    width: 508px;
+    height: 968px;
+    background: url('../../assets/images/app/phone-left.png') center/contain no-repeat;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 107px;
+    right: -253px;
+    width: 569px;
+    height: 877px;
+    background: url('../../assets/images/app/phone-right.png') center/contain no-repeat;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    row-gap: 24px;
+    width: fit-content;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -41px;
+      width: 63px;
+      height: 60px;
+      background: url('../../assets/icons/app-content-icon.svg') center/contain no-repeat;
+    }
+  }
+
+  &__actions {
+    display: grid;
+    justify-items: center;
+    row-gap: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: var(--color-davys-grey);
+  }
+}
