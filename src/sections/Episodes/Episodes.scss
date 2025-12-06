@@ -32,9 +32,7 @@
       }
 
       @include mobile {
-        @include square(40px);
-
-        top: -60px;
+        display: none;
       }
     }
 

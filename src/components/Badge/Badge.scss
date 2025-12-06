@@ -1,0 +1,20 @@
+.badge {
+  @include flex-center(true);
+  
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: var(--border-radius-xs);
+  text-transform: uppercase;
+  padding: 3px 6px;
+
+  &--vermillion {
+    color: var(--color-white);
+    background-color: var(--color-vermillion);
+  }
+
+  &--transparent {
+    color: var(--color-vermillion);
+    background-color: transparent;
+    border: var(--border-width-s) solid var(--color-vermillion);
+  }
+}
