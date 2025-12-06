@@ -4,12 +4,38 @@
   @include scribble-icon(black);
 
   &__card {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
     @include tablet {
       grid-template-columns: 1fr;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -110px;
+      right: -83px;
+      width: 125px;
+      height: 120px;
+      background: url('../../assets/icons/episodes-title-icon.svg') center/contain no-repeat;
+
+      @include laptop {
+        @include square(60px);
+
+        left: 50%;
+        top: -85px;
+        transform: translateX(-50%);
+        rotate: 320deg;
+      }
+
+      @include mobile {
+        @include square(40px);
+
+        top: -60px;
+      }
     }
 
     &:not(:last-child) {
