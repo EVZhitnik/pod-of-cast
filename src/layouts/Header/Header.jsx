@@ -47,13 +47,13 @@ const Header = (props) => {
           </nav>
           <div className="header__actions">
             <Button
-              className="header__button-recent"
+              className="header__link-recent"
               href="/"
               label="Recent Episodes"
               mode="recent"
             />
             <Button
-              className="header__button-subscribe"
+              className="header__link-subscribe"
               href="/"
               label="Subscripe"
               mode="subscripe"

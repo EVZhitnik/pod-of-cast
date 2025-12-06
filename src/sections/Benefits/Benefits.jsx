@@ -57,7 +57,7 @@ const Benefits = () => {
         ))}
       </ul>
       <Button 
-        className="benefits__button"
+        className="benefits__link"
         href="/"
         label="See Pricing"
       />

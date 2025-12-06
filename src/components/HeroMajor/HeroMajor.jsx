@@ -19,7 +19,7 @@ const HeroMajor = (props) => {
         </p>
       </div>
       <Button 
-        className="hero-major__button"
+        className="hero-major__link"
         href="/"
         mode="hero-major"
         label="Subscribe"
