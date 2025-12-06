@@ -3,6 +3,7 @@ import Episodes from "@/sections/Episodes";
 import Hero from "@/sections/Hero";
 import Intro from "@/sections/Intro";
 import Listeners from "@/sections/Listeners";
+import News from "@/sections/News";
 import Sponsor from "@/sections/Sponsor";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default () => {
       <Benefits />
       <Episodes />
       <Sponsor />
+      <News />
     </>
   )
 }

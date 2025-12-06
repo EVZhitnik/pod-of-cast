@@ -108,7 +108,6 @@ const Sponsor = () => {
           )
         })}
       </div>
-
     </Section>
   );
 };
