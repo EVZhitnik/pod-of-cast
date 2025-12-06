@@ -1,10 +1,12 @@
 import classNames from 'classnames';
 import './Section.scss';
+import Badge from '@/components/Badge';
 
 const Section = (props) => {
   const {
     className,
     isContainer = true,
+    isBadge = false,
     title,
     titleId,
     modeTitle = '',
@@ -20,6 +22,14 @@ const Section = (props) => {
       aria-label={titleId}
     >
       <header className="section__header">
+        {isBadge && (
+          <Badge 
+            className="section__badge"
+            mode="transparent"
+          >
+            Beta
+          </Badge> 
+        )}
         <h2 
           className={classNames('section__title', {
             [`section__title--${modeTitle}`]: modeTitle,

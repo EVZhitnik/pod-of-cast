@@ -1,3 +1,4 @@
+import Pod from "@/sections/Pod";
 import Benefits from "@/sections/Benefits";
 import Episodes from "@/sections/Episodes";
 import Hero from "@/sections/Hero";
@@ -20,6 +21,7 @@ export default () => {
       <Episodes />
       <Sponsor />
       <News />
+      <Pod />
     </>
   )
 }

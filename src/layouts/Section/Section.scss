@@ -4,6 +4,7 @@
 
   &__header {
     display: grid;
+    justify-items: center;
     row-gap: 20px;
 
     &:not(:last-child) {
@@ -83,6 +84,14 @@
         @include mobile {
           display: none;
         }
+      }
+    }
+
+    &--pod {
+      max-width: 486px;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
       }
     }
   }

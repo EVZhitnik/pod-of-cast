@@ -1,6 +1,7 @@
 .badge {
   @include flex-center(true);
   
+  width: fit-content;
   font-weight: 700;
   font-size: 12px;
   border-radius: var(--border-radius-xs);
