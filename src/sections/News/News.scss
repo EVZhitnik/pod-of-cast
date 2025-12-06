@@ -1,0 +1,64 @@
+.news {
+  @include scribble-icon;
+
+  &__card {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    &::before {
+      @include square(185px);
+
+      content: '';
+      position: absolute;
+      top: -83px;
+      left: -88px;
+      background: url('../../assets/icons/news-title-icon-left.svg') center/contain no-repeat;
+
+      @include laptop {
+        @include square(60px);
+
+        left: 50%;
+        top: -75px;
+        transform: translateX(-50%);
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &::after {
+      @include square(200px);
+
+      content: '';
+      position: absolute;
+      bottom: -130px;
+      right: -130px;
+      background: url('../../assets/icons/news-title-icon-right.svg') center/contain no-repeat;
+
+      @include laptop {
+        @include square(60px);
+
+        left: 50%;
+        bottom: -90px;
+        transform: translateX(-50%);
+        rotate: 40deg;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
