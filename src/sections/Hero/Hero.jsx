@@ -29,20 +29,20 @@ const Hero = (props) => {
     },
   ];
 
-  return (
-    <section className='hero' aria-labelledby={titleId}>
-      <HeroMajor 
-        className="hero__major"
-        titleId={titleId}
-        {...currentHero}
-      />
-      <div className="hero__body">
+  const getSliderHeroHome = () => {
+    return (
+      <div className="hero__slider">
         <Slider mode="hero" hasNavigation={false}>
           {heroCardItems.map((heroCardItem, index) => (
             <HeroCard className="hero__card" {...heroCardItem} key={index}/>
           ))}
         </Slider>
       </div>
+    )
+  };
+
+  const getPlatformsHeroHome = () => {
+    return (
       <div className="hero__platforms container">
           <h4 className="hero__platforms-title">Supported by:</h4>
           <Platforms 
@@ -51,6 +51,31 @@ const Hero = (props) => {
             links={itemsPlatforms}
           />
       </div>
+    )
+  };
+
+  const getBodySection = (label) => {
+    switch (label) {
+      case "home":
+        return (
+          <>
+            {getSliderHeroHome()}
+            {getPlatformsHeroHome()}
+          </>
+        );
+      default:
+        break;
+    }
+  };
+
+  return (
+    <section className='hero' aria-labelledby={titleId}>
+      <HeroMajor 
+        className="hero__major"
+        titleId={titleId}
+        {...currentHero}
+      />
+      {getBodySection(label)}
     </section>
   );
 };
