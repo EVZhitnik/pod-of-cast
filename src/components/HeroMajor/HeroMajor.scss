@@ -1,8 +1,8 @@
 .hero-major {
   position: relative;
   text-align: center;
-  padding-top: 40px;
   padding-bottom: fluid(110, 50);
+  padding-inline: 16px;
 
   &::before {
     @include abs-position(vertical);
@@ -14,7 +14,7 @@
     height: 592px;
     background: url('../../assets/icons/hero-shape-swirl.svg') left/contain no-repeat;
 
-    @include mobile-s {
+    @include tablet {
       display: none;
     }
   }
@@ -29,9 +29,17 @@
     height: 216px;
     background: url('../../assets/icons/hero-stars.svg') center/contain no-repeat;
 
-    @include mobile-s {
+    @include tablet {
       display: none;
     }   
+  }
+
+  &--home {
+    padding-bottom: fluid(110, 50);
+  }
+
+  &--about {
+    padding-bottom: fluid(166, 30);
   }
 
   &__title {
@@ -46,9 +54,22 @@
     position: relative;
     z-index: 10;
     color: var(--color-davys-grey);
+    max-width: 766px;
+    margin: 0 auto;
 
     &:not(:last-child) {
       margin-bottom: fluid(70, 30);
+    }
+  }
+
+  &__actions {
+    @include flex-center;
+    
+    column-gap: 20px;
+
+    @include mobile-s {
+      flex-direction: column;
+      row-gap: 20px;
     }
   }
 }

@@ -1,7 +1,9 @@
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: var(--color-champagne);
+  padding-top: 40px;
   padding-bottom: var(--section-padding-y);
 
   @include scribble-icon;
@@ -51,6 +53,27 @@
     @include tablet {
       flex-direction: column;
       row-gap: 10px;
+    }
+  }
+
+  &__subscriptions-cards {
+    @include abs-position(horizontal);
+
+    bottom: -116px;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: fit-content;
+
+    @include tablet {
+      position: static;
+      transform: none;
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+      width: 100%;
     }
   }
 }
