@@ -18,6 +18,84 @@
     ;
   }
 
+  &--history {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      'image content'
+      'image content'
+    ;
+    align-items: end;
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      'image'
+      'content'
+    ;
+      align-items: start;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      &::before {
+        @include square(130px);
+
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        @include tablet {
+          @include square(40px);
+        }
+
+        @include mobile-s {
+          top: auto;
+          bottom: 16px;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      &::before {
+        background: url('../../assets/icons/base-card-bg-1.svg') center/contain no-repeat;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background: url('../../assets/icons/base-card-bg-2.svg') center/contain no-repeat;
+      }
+    }
+
+    .base-card__image {
+      margin: 0;
+
+      @include mobile-s {
+        margin-bottom: 10px;
+      }
+    }
+
+    .base-card__content {
+      display: block;
+      grid-area: content;
+    }
+
+    .base-card__text {
+      padding-bottom: 20px;
+    }
+
+    .base-card__subtitle {
+      font-weight: 500;
+      text-transform: none;
+    }
+
+    .base-card__title {
+      line-height: 1;
+    }
+  }
+
   &__image {
     margin-bottom: 40px;
     border-radius: var(--border-radius-s);
@@ -28,6 +106,10 @@
     }
   }
 
+  &__content {
+    display: contents;
+  }
+
   &__text {
     text-align: left;
     padding-bottom: 40px;
@@ -36,6 +118,7 @@
   }
 
   &__subtitle {
+    display: inline-flex;
     font-weight: 700;
     font-size: 14px;
     color: var(--color-davys-grey);
@@ -69,6 +152,32 @@
       font-weight: 700;
       font-size: 12px;
       color: var(--color-davys-grey);
+    }
+  }
+
+  &__subscription {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 19px;
+    padding-top: 10px;
+
+    @include mobile-s {
+      flex-direction: column;
+      row-gap: 5px;
+      align-items: start;
+    }
+
+    &-text {
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--color-davys-grey);
+    }
+
+    &-soc1als {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   }
 }

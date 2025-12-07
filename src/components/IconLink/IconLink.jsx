@@ -23,12 +23,12 @@ const IconLink = (props) => {
   return (
     <a
       className={classNames(className)}
-      href="/"
+      href="./"
       title={title}
       aria-label={title}
     >
       <img
-        className={`${mode}__image`}
+        className={`${mode}__icon`}
         src={`./src/assets/icons/${iconName}.svg`}
         alt={title}
         width={iconWidth}

@@ -53,9 +53,9 @@ const Listeners = () => {
     <Section
       className="listeners"
       isContainer={false}
+      mode="listeners"
       title="What our listeners say"
       titleId="listeners-title"
-      modeTitle="listeners"
       description="Their experience throughout every platform"
     >
       <Slider mode="listeners">

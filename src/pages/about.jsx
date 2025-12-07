@@ -1,4 +1,5 @@
-import Hero from "@/sections/Hero"
+import Hero from "@/sections/Hero";
+import History from "@/sections/History";
 
 export const metadata = {
   title: 'About',
@@ -7,7 +8,8 @@ export const metadata = {
 export default () => {
   return (
     <>
-      <Hero label='about'/>
+      <Hero mode="swirl" label='about'/>
+      <History />
     </>
   )
 }
