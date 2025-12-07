@@ -17,9 +17,9 @@ const Intro = () => {
   return (
     <Section 
       className="intro"
+      mode="intro"
       title="Talk. Listen. Get inspired by every minute of it."
       titleId="intro-title"
-      modeTitle="intro"
     >
       <div className="intro__illustration">
         <div className="intro__illustration-column">

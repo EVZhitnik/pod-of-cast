@@ -6,10 +6,10 @@ const Section = (props) => {
   const {
     className,
     isContainer = true,
+    mode = '',
     isBadge = false,
     title,
     titleId,
-    modeTitle = '',
     description,
     children,
   } = props;
@@ -21,7 +21,9 @@ const Section = (props) => {
       })}
       aria-label={titleId}
     >
-      <header className="section__header">
+      <header className={classNames("section__header", {
+        [`section__header--${mode}`]: mode
+      })}>
         {isBadge && (
           <Badge 
             className="section__badge"
@@ -32,7 +34,7 @@ const Section = (props) => {
         )}
         <h2 
           className={classNames('section__title', {
-            [`section__title--${modeTitle}`]: modeTitle,
+            [`section__title--${mode}`]: mode,
           })}
           id={titleId}
         >

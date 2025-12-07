@@ -6,7 +6,25 @@
   padding-top: 40px;
   padding-bottom: var(--section-padding-y);
 
-  @include scribble-icon;
+  @include scribble-icon('vermillion');
+
+  &--swirl {
+    position: relative;
+
+    &::before {
+      @include square(120px);
+
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      background: url('../../assets/icons/scribble-vermillion-alternate.svg') center/contain no-repeat;
+      
+      @include tablet {
+        display: none;
+      }
+    }
+  }
 
   .platforms__list {
     gap: 10px 20px;

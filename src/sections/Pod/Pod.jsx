@@ -23,10 +23,10 @@ const Pod = () => {
     <Section
       className="pod"
       isContainer={false}
+      mode="pod"
       isBadge={true}
       title="Available now Pod of Cast App"
       titleId="pod-title"
-      modeTitle="pod"
       description="We just launched our podcast app!"
     >
       <div className="pod__content">

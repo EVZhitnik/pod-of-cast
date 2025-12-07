@@ -10,6 +10,12 @@
     &:not(:last-child) {
       margin-bottom: fluid(100, 50);
     }
+
+    &--history {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
   }
 
   &__title {

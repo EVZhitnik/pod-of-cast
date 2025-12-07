@@ -6,10 +6,12 @@ import HeroCard from '@/components/HeroCard';
 import Slider from '@/components/Slider';
 import Platforms from '@/components/Platforms';
 import SubscriptionCard from '@/components/SubscriptionCard';
+import classNames from 'classnames';
 
 const Hero = (props) => {
   const {
-    label, // 'home', 'about' и т.д.
+    mode = '',
+    label = '', // 'home', 'about' и т.д.
   } = props;
 
   const titleId = 'hero-title';
@@ -98,7 +100,9 @@ const Hero = (props) => {
   };
 
   return (
-    <section className='hero' aria-labelledby={titleId}>
+    <section className={classNames("hero", {
+      [`hero--${mode}`]: mode
+    })} aria-labelledby={titleId}>
       <HeroMajor 
         className="hero__major"
         mode={label}

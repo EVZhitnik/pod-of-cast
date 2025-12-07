@@ -40,9 +40,9 @@ const Benefits = () => {
   return (
     <Section
       className="benefits"
+      mode="benefits"
       title="Membership benefits"
       titleId="benefits-title"
-      modeTitle="benefits"
       description="Become our sponsor and get all benefits"
     >
       <ul className="benefits__list">

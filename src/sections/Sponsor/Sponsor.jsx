@@ -41,9 +41,9 @@ const Sponsor = () => {
   return (
     <Section
       className="sponsor"
+      mode="sponsor"
       title="Become our sponsor"
       titleId="sponsor-title"
-      modeTitle="sponsor"
       description="Get exclusive episodes, merch and more"
     >
       <div className="sponsor__card">
