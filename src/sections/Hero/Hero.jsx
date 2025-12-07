@@ -5,6 +5,7 @@ import heroCardItems from './heroCardItems';
 import HeroCard from '@/components/HeroCard';
 import Slider from '@/components/Slider';
 import Platforms from '@/components/Platforms';
+import SubscriptionCard from '@/components/SubscriptionCard';
 
 const Hero = (props) => {
   const {
@@ -29,7 +30,7 @@ const Hero = (props) => {
     },
   ];
 
-  const getSliderHeroHome = () => {
+  const getSliderHomeHero = () => {
     return (
       <div className="hero__slider">
         <Slider mode="hero" hasNavigation={false}>
@@ -41,7 +42,7 @@ const Hero = (props) => {
     )
   };
 
-  const getPlatformsHeroHome = () => {
+  const getPlatformsHomeHero = () => {
     return (
       <div className="hero__platforms container">
           <h4 className="hero__platforms-title">Supported by:</h4>
@@ -54,13 +55,41 @@ const Hero = (props) => {
     )
   };
 
+  const getCardsAboutHero = () => {
+    const aboutCardsData = [
+      {
+        value: <>76<span>K</span></>,
+        text: "Community Members",
+      },
+      {
+        value: <>128<span>K</span></>,
+        text: "Podcast Subscribers",
+      },
+      {
+        value: <>59<span>K</span></>,
+        text: "Daily Listeners",
+      },
+    ] 
+    return (
+      <div className="hero__subscriptions-cards container">
+        <SubscriptionCard cardData={aboutCardsData} />
+      </div>
+    )
+  }
+
   const getBodySection = (label) => {
     switch (label) {
       case "home":
         return (
           <>
-            {getSliderHeroHome()}
-            {getPlatformsHeroHome()}
+            {getSliderHomeHero()}
+            {getPlatformsHomeHero()}
+          </>
+        );
+      case "about":
+        return (
+          <>
+            {getCardsAboutHero()}
           </>
         );
       default:
@@ -72,8 +101,10 @@ const Hero = (props) => {
     <section className='hero' aria-labelledby={titleId}>
       <HeroMajor 
         className="hero__major"
+        mode={label}
         titleId={titleId}
         {...currentHero}
+        label={label}
       />
       {getBodySection(label)}
     </section>
