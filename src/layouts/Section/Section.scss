@@ -100,6 +100,27 @@
         margin-bottom: 8px;
       }
     }
+
+    &--our {
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        top: -40px;
+        left: -72px;
+        width: fluid(74, 50);
+        height: fluid(74, 50);
+        background: url('../../assets/icons/intro-title-icon.svg') center/contain no-repeat;
+
+        @include tablet {
+          left: -80px;          
+        }
+
+        @include mobile {
+          display: none;
+        }
+      } 
+    }
   }
   
   &__description {

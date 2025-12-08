@@ -1,0 +1,42 @@
+.our {
+  background-color: var(--color-champagne);
+
+  .section__body {
+    padding-left: max(16px, calc(100vw - 1556px));
+
+    @include mobile-s {
+      padding-right: 16px;
+    }
+  }
+
+  .slider__list {
+    height: auto;
+  }
+
+  &__card {
+    @include flex-center;
+
+    flex-direction: column;
+    
+    &-link {
+      padding-bottom: 20px;
+      border-bottom: var(--border-xs);
+    }
+
+    &-description {
+      color: var(--color-davys-grey);
+      padding-top: 30px;
+
+      span {
+        color: var(--color-black);
+      }
+    }
+
+    &-icon {
+      @include mobile-s {
+        width: 150px;
+        height: 30px;
+      }
+    }
+  }
+}
