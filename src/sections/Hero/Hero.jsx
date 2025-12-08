@@ -21,7 +21,11 @@ const Hero = (props) => {
   const getSliderHomeHero = () => {
     return (
       <div className="hero__slider">
-        <Slider mode="hero" hasNavigation={false}>
+        <Slider 
+          mode="hero" 
+          labelSliderParams="hero" 
+          hasNavigation={false}
+        >
           {heroCardItems.map((heroCardItem, index) => (
             <HeroCard className="hero__card" {...heroCardItem} key={index}/>
           ))}

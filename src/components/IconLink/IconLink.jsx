@@ -20,6 +20,19 @@ const IconLink = (props) => {
   const iconWidth = width || defaultWidth;
   const iconHeight = height || defaultHeight;
 
+  const getClassNameImgIconLink = (mode) => {
+    switch (mode) {
+      case "our__card":
+        return (
+          `${mode}-icon`
+        );
+      default:
+        return (
+          `${mode}__icon`
+        );
+    }
+  };
+
   return (
     <a
       className={classNames(className)}
@@ -28,7 +41,7 @@ const IconLink = (props) => {
       aria-label={title}
     >
       <img
-        className={`${mode}__icon`}
+        className={getClassNameImgIconLink(mode)}
         src={`./src/assets/icons/${iconName}.svg`}
         alt={title}
         width={iconWidth}

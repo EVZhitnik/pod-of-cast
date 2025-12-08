@@ -53,11 +53,20 @@
       height: fluid(360, 270);
       background-color: var(--color-white);
       border-radius: var(--border-radius-s);
-      padding: 40px;
+      padding: fluid(40, 20);
 
-      @include mobile {
-        padding: 20px;
+      @include mobile-s {
+        width: 100% !important;
       }
+    }
+
+    &--our {
+      width: 570px !important;
+      height: 245px;
+      border: var(--border-m-black);
+      border-radius: var(--border-radius-m);
+      background-color: var(--color-white);
+      padding: fluid(40, 20) 17px fluid(30, 20);
 
       @include mobile-s {
         width: 100% !important;

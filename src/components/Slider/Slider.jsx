@@ -34,7 +34,7 @@ const heroSliderParams = {
   },
 };
 
-const listenersSliderParams = {
+const defaultSliderParams = {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 1000,
@@ -64,15 +64,16 @@ const listenersSliderParams = {
       allowTouchMove: false,
     }
   },
-}
+};
 
 const Slider = (props) => {
   const {
     children,
     mode = '',
+    labelSliderParams = '',
     hasNavigation = true,
     navigationTargetElementId = null,
-    sliderParams = mode === 'hero' ? heroSliderParams : listenersSliderParams,
+    sliderParams = labelSliderParams === 'hero' ? heroSliderParams : defaultSliderParams,
   } = props;
 
   const modSliderItem = mode ? `slider__item--${mode}` : '';

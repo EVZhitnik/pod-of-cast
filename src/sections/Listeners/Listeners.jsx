@@ -58,7 +58,7 @@ const Listeners = () => {
       titleId="listeners-title"
       description="Their experience throughout every platform"
     >
-      <Slider mode="listeners">
+      <Slider mode="listeners" labelSliderParams="default">
         {quoteItems.map((quoteData, index) => (
           <Quote 
             className="listeners__quote"
