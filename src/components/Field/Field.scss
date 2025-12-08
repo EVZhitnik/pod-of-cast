@@ -1,0 +1,49 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 16px;
+
+  &__label {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__required-star {
+    font-weight: 700;
+    color: var(--color-vermillion);
+  }
+
+  &__control {
+    font-weight: 700;
+    color: var(--color-black);    
+    width: 100%;
+    height: fluid-to-mobile(64, 53);
+    padding-inline: fluid-to-mobile(20, 16);
+    border: var(--border-m-black);
+    border-radius: var(--border-radius-s);
+
+    @include hover {
+      border-color: var(--color-vermillion);
+    }
+
+    &:user-invalid {
+      border-color: red;
+    }
+
+    &:disabled {
+      @include disabled;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      color: var(--color-davys-grey);
+    }
+  }
+
+  textarea.field__control {
+    resize: vertical;
+    min-height: fluid(165, 110);
+    padding-block: fluid-to-mobile(20, 16);
+  }
+}

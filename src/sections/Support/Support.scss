@@ -1,0 +1,103 @@
+.support {
+  position: relative;
+  padding-inline: 16px;
+
+  &::before {
+    @include square(120px);
+
+    content: '';
+    position: absolute;
+    top: 743px;
+    left: 20px;
+    background: url('../../assets/icons/scribble-vermillion-alternate.svg') center/contain no-repeat;
+
+    @include tablet {
+      display: none;
+    }     
+  }
+
+  &::after {
+    @include square(78px);
+
+    content: '';
+    position: absolute;
+    top: 327px;
+    right: 140px;
+    background: url('../../assets/icons/content.svg') center/contain no-repeat; 
+    
+    @include laptop {
+      right: 20px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: fluid-to-mobile(40, 20) 20px;
+    padding-top: 40px;
+    padding-bottom: fluid-to-mobile(60, 40);
+    border-top: var(--border-xs);
+    max-width: 766px;
+    margin: 0 auto;
+
+    @include mobile-s-above {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-cell {
+      &--wide {
+        grid-column: -1 / 1;
+      }
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+    max-width: 766px;
+    margin: 0 auto;
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__required {
+    font-size: 14px;
+    justify-self: start;
+
+    @include mobile-s {
+      justify-self: center;
+    }
+
+    &-star {
+      font-weight: 700;
+      color: var(--color-vermillion);
+    }
+  }
+
+  &__button {
+    justify-self: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    max-width: 176px;
+    text-align: left;
+    justify-self: end;
+
+    @include mobile-s {
+      justify-self: center;
+      text-align: center;
+    }
+
+    a {
+      color: var(--color-vermillion);
+    }
+  }
+}

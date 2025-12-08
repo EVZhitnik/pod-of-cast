@@ -16,6 +16,12 @@
         margin-bottom: 32px;
       }
     }
+
+    &--support {
+      &:not(:last-child) {
+        margin-bottom: fluid(60, 50);
+      }
+    }
   }
 
   &__title {
@@ -115,6 +121,22 @@
         @include tablet {
           left: -80px;          
         }
+
+        @include mobile {
+          display: none;
+        }
+      } 
+    }
+
+    &--support {
+      &::after {
+        content: '';
+        position: absolute;
+        top: -33px;
+        right: -35px;
+        width: fluid(68, 50);
+        height: fluid(24, 50);
+        background: url('../../assets/icons/support-title-icon.svg') center/contain no-repeat;
 
         @include mobile {
           display: none;
