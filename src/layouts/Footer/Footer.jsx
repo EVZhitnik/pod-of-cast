@@ -3,6 +3,7 @@ import './Footer.scss';
 import Socials from '@/components/Socials';
 import Platforms from '@/components/Platforms';
 import AppLinks from '@/components/App';
+import itemsPlatforms from '@/constants/itemsPlatforms';
 
 const Footer = () => {
   const itemsMenu = [
@@ -48,21 +49,6 @@ const Footer = () => {
     {
       label: 'Tiktok',
       iconName: 'tiktok',
-    },
-  ];
-
-  const itemsPlatforms = [
-    {
-      label: 'Google Podcasts',
-      iconName: 'google-podcasts',
-    },
-    {
-      label: 'Spotify',
-      iconName: 'spotify',
-    },
-    {
-      label: 'YouTube',
-      iconName: 'youtube',
     },
   ];
 

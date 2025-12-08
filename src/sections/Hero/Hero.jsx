@@ -7,6 +7,7 @@ import Slider from '@/components/Slider';
 import Platforms from '@/components/Platforms';
 import SubscriptionCard from '@/components/SubscriptionCard';
 import classNames from 'classnames';
+import itemsPlatforms from '@/constants/itemsPlatforms';
 
 const Hero = (props) => {
   const {
@@ -16,21 +17,6 @@ const Hero = (props) => {
 
   const titleId = 'hero-title';
   const currentHero = heroItems[label];
-
-  const itemsPlatforms = [
-    {
-      label: 'Spotify',
-      iconName: 'spotify',
-    },
-    {
-      label: 'Google Podcasts',
-      iconName: 'google-podcasts',
-    },
-    {
-      label: 'YouTube',
-      iconName: 'youtube',
-    },
-  ];
 
   const getSliderHomeHero = () => {
     return (
