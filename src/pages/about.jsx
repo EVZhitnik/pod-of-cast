@@ -11,7 +11,7 @@ export const metadata = {
 export default () => {
   return (
     <>
-      <Hero mode="swirl" label='about'/>
+      <Hero mode="swirl" label="about" />
       <History />
       <Our />
       <Support />

@@ -60,7 +60,7 @@ const EpisodesCard = (props) => {
                     className='episodes-card__hosted-image' 
                     src={srcImg} 
                     key={index}
-                    alt={`Host ${index + 1}`} 
+                    alt={`Avatar ${index + 1}`} 
                   />
                 ))}
               </div>

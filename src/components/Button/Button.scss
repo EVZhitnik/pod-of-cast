@@ -70,6 +70,23 @@
 
   &--hero-transparent {
     box-shadow: var(--shadow-s-black);
+
+    @include hover {
+      .button__icon {
+        svg {
+          fill: var(--color-vermillion);
+        }
+      }
+    }
+    
+    .button__icon {
+      --iconSize: 16px;
+
+      svg {
+        fill: var(--color-black);
+        stroke: none;
+      }
+    }
   }
 
   &--subscripe {

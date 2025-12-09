@@ -31,7 +31,7 @@ const Hero = (props) => {
           ))}
         </Slider>
       </div>
-    )
+    );
   };
 
   const getPlatformsHomeHero = () => {
@@ -44,7 +44,7 @@ const Hero = (props) => {
             links={itemsPlatforms}
           />
       </div>
-    )
+    );
   };
 
   const getCardsAboutHero = () => {
@@ -61,12 +61,13 @@ const Hero = (props) => {
         value: <>59<span>K</span></>,
         text: "Daily Listeners",
       },
-    ] 
+    ];
+
     return (
       <div className="hero__subscriptions-cards container">
         <SubscriptionCard cardData={aboutCardsData} />
       </div>
-    )
+    );
   }
 
   const getBodySection = (label) => {
@@ -86,7 +87,7 @@ const Hero = (props) => {
         );
       default:
         break;
-    }
+    };
   };
 
   return (
@@ -95,7 +96,6 @@ const Hero = (props) => {
     })} aria-labelledby={titleId}>
       <HeroMajor 
         className="hero__major"
-        mode={label}
         titleId={titleId}
         {...currentHero}
         label={label}
