@@ -13,10 +13,11 @@ const Episodes = () => {
       titleId="episodes-title"
       description="Available on your favorite platform"
     >
-      <EpisodesCard 
-        className="episodes__card"
-        dataCard={episodesCardsData}
-      />
+      <div className="episodes__card container">
+        <EpisodesCard 
+          dataCard={episodesCardsData}
+        />
+      </div>
       <Button 
         className="episodes__button"
         href="/"

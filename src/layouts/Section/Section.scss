@@ -143,6 +143,22 @@
         }
       } 
     }
+
+    &--latest-episode {
+      &::before {
+        @include square(120px);
+
+        content: '';
+        position: absolute;
+        top: -63px;
+        left: -84px;
+        background: url('../../assets/icons/history-title-content.svg') center/contain no-repeat;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
   }
   
   &__description {

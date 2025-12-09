@@ -1,0 +1,25 @@
+.latest-episode {
+  position: relative;
+  &::after {
+    @include square(200px);
+
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    left: 265px;
+    background: url('../../assets/icons/news-title-icon-right.svg') center/contain no-repeat;
+    rotate: 70deg;
+
+    @include laptop {
+      @include square(60px);
+
+      left: 50%;
+      transform: translateX(-50%);
+      rotate: 40deg;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

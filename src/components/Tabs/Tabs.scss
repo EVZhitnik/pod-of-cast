@@ -1,0 +1,27 @@
+.tabs {
+  position: relative;
+  z-index: 10;
+  
+  &__navigation {
+    padding-bottom: 20px;
+    border-bottom: var(--border-m-grey);
+  }
+
+  &__body {
+    padding-top: fluid(100, 50);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    &:not(.is-active) {
+      display: none;
+    }
+  }
+}
