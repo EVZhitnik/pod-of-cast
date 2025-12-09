@@ -6,7 +6,6 @@ import Tags from '@/components/Tags';
 
 const EpisodesCard = (props) => {
   const {
-    className,
     dataCard = [],
   } = props;
 
@@ -17,7 +16,7 @@ const EpisodesCard = (props) => {
   ];
 
   return (
-    <div className={classNames(className, 'container')}>
+    <>
       {dataCard.map((cardItems, index) => {
         const {
           imgSrc,
@@ -66,8 +65,9 @@ const EpisodesCard = (props) => {
               </div>
             </div>
           </article>
-        )})}
-    </div>
+        )})
+      }
+    </>   
   );
 };
 
