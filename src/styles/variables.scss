@@ -9,6 +9,7 @@
 
     --border-xs: var(--border-width-xs) solid var(--color-davys-grey);
     --border-s: var(--border-width-s) solid var(--color-davys-grey);
+    --border-s-black: var(--border-width-s) solid var(--color-black);
     --border-m-grey: var(--border-width-m) solid var(--color-davys-grey);
     --border-m-black: var(--border-width-m) solid var(--color-black);
     --border-l: var(--border-width-l) solid var(--color-black);
@@ -29,7 +30,7 @@
     --shadow-s-pewter-blue: var(--shadow-param-s) var(--shadow-param-s) 0 0 var(--color-pewter-blue);
     --shadow-m-black: var(--shadow-param-m) var(--shadow-param-m) 0 0 var(--color-black);
     --shadow-m-pewter-blue: var(--shadow-param-m) var(--shadow-param-m) 0 0 var(--color-pewter-blue);
-    --shadow-l-pewter-blue: var(--shadow-param-s) var(--shadow-param-s) 0 0 var(--color-pewter-blue);
+    --shadow-l-pewter-blue: var(--shadow-param-l) var(--shadow-param-l) 0 0 var(--color-pewter-blue);
 
     --shadow-param-l: 12px;
     --shadow-param-m: 10px;
