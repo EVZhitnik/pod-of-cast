@@ -59,12 +59,13 @@ const History = () => {
       </div>
       <div className="history__footer container">
         <h3 className="history__footer-title">Founder and Main Host</h3>
-        <BaseCard 
-          className="history__cards"
-          mode="history"
-          dataCard={dataBaseCard}
-          isSubscription={true}
-        />
+        <div className="history__cards">
+          <BaseCard 
+            mode="history"
+            dataCard={dataBaseCard}
+            isSubscription={true}
+          />
+        </div>
       </div>
     </Section>
   );

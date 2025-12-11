@@ -16,10 +16,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
-    @include tablet {
-      grid-template-columns: 1fr;
-    }
-
     &:not(.is-active) {
       display: none;
     }

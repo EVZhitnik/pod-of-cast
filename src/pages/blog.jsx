@@ -1,4 +1,5 @@
 import Hero from "@/sections/Hero";
+import LatestPosts from "@/sections/LatestPosts";
 
 
 export const metadata = {
@@ -9,6 +10,7 @@ export default () => {
   return (
     <>
       <Hero mode="swirl" label="blog" />
+      <LatestPosts />
     </>
   )
 };

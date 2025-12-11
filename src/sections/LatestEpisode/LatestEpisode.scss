@@ -1,5 +1,6 @@
 .latest-episode {
   position: relative;
+
   &::after {
     @include square(200px);
 
@@ -20,6 +21,14 @@
 
     @include mobile {
       display: none;
+    }
+  }
+
+  &__tabs {
+    .tabs__content {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

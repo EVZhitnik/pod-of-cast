@@ -30,12 +30,13 @@ const News = () => {
       titleId="news-title"
       description="News, tips, tricks and more"
     >
-      <BaseCard 
-        className="news__card"
-        mode="news"
-        dataCard={dataBaseCard}
-        isTitleTheLink={true}
-      />
+      <div className="news__card">
+        <BaseCard 
+          mode="news"
+          dataCard={dataBaseCard}
+          isTitleTheLink={true}
+        />
+      </div>
       <Button 
         className="news-card__link"
         href="/"
