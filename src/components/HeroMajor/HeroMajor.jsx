@@ -149,6 +149,17 @@ const HeroMajor = (props) => {
           <>
             {getBodyHeroMajorPodcast(label)}
           </>
+        )
+      case "blog":
+        return (
+          <>
+            <h1 className="hero-major__title" id={titleId}>{title}</h1>
+            <div className="hero-major__description">
+              <p>
+                {description}
+              </p>
+            </div>
+          </>          
         )  
       default:
         break;

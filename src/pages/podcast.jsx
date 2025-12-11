@@ -1,10 +1,10 @@
-import Hero from "@/sections/Hero"
-import LatestEpisode from "@/sections/LatestEpisode"
-import Pod from "@/sections/Pod"
+import Hero from "@/sections/Hero";
+import LatestEpisode from "@/sections/LatestEpisode";
+import Pod from "@/sections/Pod";
 
 export const metadata = {
   title: 'Podcats',
-}
+};
 
 export default () => {
   return (
@@ -14,4 +14,4 @@ export default () => {
       <Pod />
     </>
   )
-}
+};
