@@ -1,25 +1,28 @@
 import Section from '@/layouts/Section';
-import './News.scss';
+import './Related.scss';
 import BaseCard from '@/components/BaseCard';
-import Button from '@/components/Button';
 import dataBaseCard from '@/constants/dataBaseCard';
+import Button from '@/components/Button';
 
-const News = () => {
+const Related = () => {
   return (
     <Section
-      className="news"
-      title="Article and News"
-      titleId="news-title"
-      description="News, tips, tricks and more"
+      className="related"
+      isContainer={false}
+      mode="related"
+      title="Related Article"
+      titleId="related-title"
+      description="News, Tips, Tricks and more"
+      label="related"
     >
       <div className="news__card">
-        <BaseCard 
+        <BaseCard
           mode="news"
           dataCard={dataBaseCard}
           isTitleTheLink={true}
         />
       </div>
-      <Button 
+      <Button
         className="news-card__link"
         href="/"
         label="Browse all"
@@ -28,4 +31,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Related;

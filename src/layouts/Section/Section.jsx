@@ -11,6 +11,7 @@ const Section = (props) => {
     title,
     titleId,
     description,
+    label = "",
     children,
   } = props;
 
@@ -46,7 +47,13 @@ const Section = (props) => {
           </div>
         )}
       </header>
-      <div className="section__body">{children}</div>
+      {label === "related" ? (
+        <div className="section__body">
+          <div className="related__inner container">{children}</div>
+        </div>
+      ) : (
+        <div className="section__body">{children}</div>
+      )}
     </section>
   );
 };

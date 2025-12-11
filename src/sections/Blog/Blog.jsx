@@ -18,7 +18,7 @@ const Blog = () => {
   return (
     <section 
       className={classNames("blog", "section")}
-      aria-label='blog-title'
+      aria-label="blog-title"
     >
       <Image 
         className="blog__image" 
@@ -27,7 +27,7 @@ const Blog = () => {
       />
       <div className="blog__inner container">
         <div className="blog__info">
-          <h2 className="blog__info-title h3">Doodle for our podcast background room</h2>
+          <h2 className="blog__info-title h3" id="blog-title">Doodle for our podcast background room</h2>
           <ul className="blog__info-list">
             <li className="blog__info-item">
               <p>
