@@ -3,11 +3,9 @@ import './LatestEpisode.scss';
 import Tabs from '@/components/Tabs';
 import latestEpisodeGroups from './latestEpisodeGroups';
 import EpisodesCard from '@/components/EpisodesCard';
-import TabsNavigation from '@/components/Tabs/components/TabsNavigation';
 
 const LatestEpisode = () => {
   const tabsTitle = "latest-episode-tabs";
-  const tabsNavigationId = "latest-episode-navigation";
 
   return (
     <Section
@@ -18,6 +16,7 @@ const LatestEpisode = () => {
       titleId="latest-episode-title"
     >
       <Tabs
+        className="latest-episode__tabs"
         title={tabsTitle}
         items={latestEpisodeGroups.map((latestEpisodeGroup) => ({
           title: latestEpisodeGroup.title,

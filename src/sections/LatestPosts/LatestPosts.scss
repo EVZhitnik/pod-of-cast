@@ -1,0 +1,11 @@
+.latest-posts {
+  &__tabs {
+    .tabs__content {
+      gap: 40px 20px;
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
