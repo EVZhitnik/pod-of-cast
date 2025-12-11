@@ -109,6 +109,51 @@
     padding-bottom: fluid(117, 50);
   }
 
+  &--single-blog {
+    padding-top: fluid(56, 40);
+    padding-bottom: 45px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &__back {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 47px;
+    transition-duration: var(--transition-duration);    
+    cursor: pointer;
+
+      @include hover {
+        color: var(--color-vermillion);
+      }
+
+    &-icon {
+      --iconSize: 24px;
+    }
+
+    &-link {
+      font-size: 14px;
+      color: var(--color-davys-grey);
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: var(--color-davys-grey);
+  }
+
+  &__text {
+    display: grid;
+    row-gap: 10px;
+  }
+
   &__title {
     margin-bottom: fluid(40, 20);
   }
@@ -137,6 +182,18 @@
     @include mobile-s {
       flex-direction: column;
       row-gap: 20px;
+    }
+  }
+
+  &__tags,
+  &__soc1als  {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__tags {    
+    &:not(:last-child) {
+      margin-bottom: fluid(40, 20);
     }
   }
   
