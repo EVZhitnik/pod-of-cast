@@ -8,6 +8,7 @@ import Platforms from '@/components/Platforms';
 import SubscriptionCard from '@/components/SubscriptionCard';
 import classNames from 'classnames';
 import itemsPlatforms from '@/constants/itemsPlatforms';
+import FieldSearch from '@/components/FieldSearch';
 
 const Hero = (props) => {
   const {
@@ -68,7 +69,15 @@ const Hero = (props) => {
         <SubscriptionCard cardData={aboutCardsData} />
       </div>
     );
-  }
+  };
+ 
+  const getSearchBlogHero = () => {
+    return (
+      <div className="hero__search">
+        <FieldSearch />
+      </div>
+    );
+  };
 
   const getBodySection = (label) => {
     switch (label) {
@@ -85,6 +94,12 @@ const Hero = (props) => {
             {getCardsAboutHero()}
           </>
         );
+      case "blog":
+        return (
+          <>
+            {getSearchBlogHero()}
+          </>
+        )  
       default:
         break;
     };
