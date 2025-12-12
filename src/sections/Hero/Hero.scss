@@ -6,19 +6,9 @@
   padding-top: 40px;
   padding-bottom: var(--section-padding-y);
 
-  &:has(.hero-major--podcast) {
-    padding: 0;
-
-    &::after {
-      display: block;
-
-      @include tablet-above {
-        display: none;
-      }
-    }
-  }
-
-  &:has(.hero-major--blog) {
+  &:has(.hero-major--podcast),
+  &:has(.hero-major--blog),
+  &:has(.hero-major--single-blog) {
     padding: 0;
 
     &::after {

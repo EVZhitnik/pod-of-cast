@@ -99,9 +99,7 @@ const Hero = (props) => {
           <>
             {getSearchBlogHero()}
           </>
-        )  
-      default:
-        break;
+        );
     };
   };
 

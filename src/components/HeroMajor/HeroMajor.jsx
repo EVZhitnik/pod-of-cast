@@ -5,6 +5,8 @@ import HeroCard from '@/components/HeroCard';
 import Badge from '@/components/Badge';
 import { Image } from 'minista';
 import Tags from '@/components/Tags';
+import Socials from '@/components/Socials';
+import Icon from '@/components/Icon';
 
 const HeroMajor = (props) => {
   const {
@@ -12,8 +14,13 @@ const HeroMajor = (props) => {
     label = '',
     mode = label,
     titleId,
+    linkToBack,
+    date,
+    subtitle,
     title,
     description,
+    tags = [],
+    socialsLinks = [],
   } = props;
 
   const getButtonsSectionHero = (label) => {
@@ -55,7 +62,7 @@ const HeroMajor = (props) => {
               />
             </div>            
           </>
-        )
+        );
       default:
         break;
     }
@@ -127,7 +134,31 @@ const HeroMajor = (props) => {
         </div>
       </div>
     );
-  }
+  };
+
+  const getBodyHeroMajorSingleBlog = () => {
+    return (
+      <>
+        <div className="hero-major__header container">
+          <div className="hero-major__back">
+            <Icon className="hero-major__back-icon" name="arrow-left-single" />
+            <a className="hero-major__back-link" href="/">{linkToBack}</a>
+          </div>
+          <div className="hero-major__date">{date}</div>
+        </div>
+        <div className="hero-major__text">
+          <span className="hero-major__subtitle">{subtitle}</span>
+          <h1 className="hero-major__title h2" id={titleId}>{title}</h1>
+        </div>
+        <Tags className="hero-major__tags" items={tags} />
+        <Socials 
+          className="hero-major__soc1als" 
+          mode="soc1als-footer" 
+          links={socialsLinks}
+        />
+      </>
+    );
+  };
 
   const getBodyHeroMajor = (label) => {
     switch (label) {
@@ -149,7 +180,7 @@ const HeroMajor = (props) => {
           <>
             {getBodyHeroMajorPodcast(label)}
           </>
-        )
+        );
       case "blog":
         return (
           <>
@@ -160,9 +191,13 @@ const HeroMajor = (props) => {
               </p>
             </div>
           </>          
-        )  
-      default:
-        break;
+        );
+      case "single-blog":
+        return (
+        <>
+          {getBodyHeroMajorSingleBlog()}
+        </>
+        );
     }
   };
 
