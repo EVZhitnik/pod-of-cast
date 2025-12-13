@@ -6,6 +6,7 @@ const Section = (props) => {
   const {
     className,
     isContainer = true,
+    id,
     mode = '',
     isBadge = false,
     title,
@@ -21,6 +22,7 @@ const Section = (props) => {
         'container': isContainer,
       })}
       aria-label={titleId}
+      id={id}
     >
       <header className={classNames("section__header", {
         [`section__header--${mode}`]: mode

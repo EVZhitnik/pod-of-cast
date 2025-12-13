@@ -112,6 +112,7 @@
   &__search {
     @include abs-position(horizontal);
 
+    z-index: 15;
     bottom: -37px;
     width: 100%;
     max-width: 570px;

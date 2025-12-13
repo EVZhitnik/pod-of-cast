@@ -2,23 +2,9 @@ import Section from '@/layouts/Section';
 import './Pod.scss';
 import Button from '@/components/Button';
 import Socials from '@/components/Socials';
+import platformGroupsData from '@/constants/platformGroupsData';
 
 const Pod = () => {
-  const socialsData = [
-    {
-      label: 'Google Podcast',
-      iconName: 'google-podcast-mini',
-    },
-    {
-      label: 'Spotify',
-      iconName: 'spotify-mini',
-    },
-    {
-      label: 'You Tube',
-      iconName: 'youtube-mini',
-    },
-  ];
-
   return (
     <Section
       className="pod"
@@ -40,7 +26,7 @@ const Pod = () => {
           <Socials 
             className='pod__soc1als' 
             mode="soc1als-pod" 
-            links={socialsData}
+            links={platformGroupsData[0].base}
           />
         </div>
       </div>

@@ -1,10 +1,13 @@
 import Section from '@/layouts/Section';
 import './Related.scss';
 import BaseCard from '@/components/BaseCard';
-import dataBaseCard from '@/constants/dataBaseCard';
+import baseCardGroupsData from '@/constants/baseCardGroupsData';
 import Button from '@/components/Button';
 
 const Related = () => {
+  const allSection = baseCardGroupsData[0].home.find(section => section.title === "All");
+  const baseCardData = allSection?.items?.slice(0, 2) || [];
+
   return (
     <Section
       className="related"
@@ -18,7 +21,7 @@ const Related = () => {
       <div className="news__card">
         <BaseCard
           mode="news"
-          dataCard={dataBaseCard}
+          dataCard={baseCardData}
           isTitleTheLink={true}
         />
       </div>

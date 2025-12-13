@@ -8,7 +8,7 @@
   &__item {
     @include flex-center;
 
-    border: var(--border-s);
+    border: var(--border-s-grey);
     border-radius: var(--border-radius-xs);
   }
 

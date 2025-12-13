@@ -45,11 +45,6 @@
 
     &-item {
       color: var(--color-davys-grey);
-
-      span {
-        font-weight: 700;
-        color: var(--color-black);
-      }
     }
 
     a {
@@ -134,11 +129,6 @@
         margin: 0;
       }
 
-      span {
-        font-weight: 700;
-        color: var(--color-black);
-      }
-
       a {
         color: var(--color-black);
 
@@ -146,6 +136,11 @@
           color: var(--color-vermillion);
         }
       }
+    }
+
+    &-accent {
+      font-weight: 700;
+      color: var(--color-black);
     }
   }
 

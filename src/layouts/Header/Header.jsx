@@ -20,10 +20,10 @@ const Header = (props) => {
     },
     {
       label: 'More',
-      href: './more',
+      href: './blog',
       submenu: <Button className="header__button-submenu" mode='submenu' label="Submenu" isLabelHidden iconName="header-arrow-down"/>
     },
-  ]
+  ];
 
   return (
     <header className="header" data-js-overlay-menu="">
@@ -48,7 +48,7 @@ const Header = (props) => {
           <div className="header__actions">
             <Button
               className="header__link-recent"
-              href="/"
+              href="#episodes"
               label="Recent Episodes"
               mode="recent"
             />
@@ -68,6 +68,6 @@ const Header = (props) => {
       </div>
     </header>
   )
-}
+};
 
 export default Header;

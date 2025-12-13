@@ -1,13 +1,12 @@
 import HeroMajor from '@/components/HeroMajor';
 import './Hero.scss';
 import heroItems from './heroItems';
-import heroCardItems from './heroCardItems';
 import HeroCard from '@/components/HeroCard';
 import Slider from '@/components/Slider';
 import Platforms from '@/components/Platforms';
-import SubscriptionCard from '@/components/SubscriptionCard';
+import AboutCard from '@/components/AboutCard';
 import classNames from 'classnames';
-import itemsPlatforms from '@/constants/itemsPlatforms';
+import platformGroupsData from '@/constants/platformGroupsData';
 import FieldSearch from '@/components/FieldSearch';
 
 const Hero = (props) => {
@@ -20,6 +19,15 @@ const Hero = (props) => {
   const currentHero = heroItems[label];
 
   const getSliderHomeHero = () => {
+    const heroCardTitleData = [
+      "COVID-19 Endemic",
+      "Self–confidence",
+      "Perplexed Mind",
+      "Social Class",
+      "Women’s Rights",
+      "Tesla Autopilot",
+    ];
+
     return (
       <div className="hero__slider">
         <Slider 
@@ -27,8 +35,8 @@ const Hero = (props) => {
           labelSliderParams="hero" 
           hasNavigation={false}
         >
-          {heroCardItems.map((heroCardItem, index) => (
-            <HeroCard className="hero__card" {...heroCardItem} key={index}/>
+          {heroCardTitleData.map((title, index) => (
+            <HeroCard className="hero__card" title={title} key={index}/>
           ))}
         </Slider>
       </div>
@@ -42,31 +50,31 @@ const Hero = (props) => {
           <Platforms 
             className="hero__platforms-soc1als"
             variant="hero" 
-            links={itemsPlatforms}
+            links={platformGroupsData[0].platforms}
           />
       </div>
     );
   };
 
   const getCardsAboutHero = () => {
-    const aboutCardsData = [
+    const aboutCardData = [
       {
-        value: <>76<span>K</span></>,
+        value: <>76<span className="about-card__value-accent">K</span></>,
         text: "Community Members",
       },
       {
-        value: <>128<span>K</span></>,
+        value: <>128<span className="about-card__value-accent">K</span></>,
         text: "Podcast Subscribers",
       },
       {
-        value: <>59<span>K</span></>,
+        value: <>59<span className="about-card__value-accent">K</span></>,
         text: "Daily Listeners",
       },
     ];
 
     return (
       <div className="hero__subscriptions-cards container">
-        <SubscriptionCard cardData={aboutCardsData} />
+        <AboutCard cardData={aboutCardData} />
       </div>
     );
   };

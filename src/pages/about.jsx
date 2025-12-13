@@ -6,7 +6,7 @@ import Support from "@/sections/Support";
 
 export const metadata = {
   title: 'About',
-}
+};
 
 export default () => {
   return (
@@ -18,4 +18,4 @@ export default () => {
       <Pod />
     </>
   )
-}
+};

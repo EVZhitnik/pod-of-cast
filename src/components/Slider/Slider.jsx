@@ -5,31 +5,22 @@ import SliderNavigation from './components/SliderNavigation';
 const heroSliderParams = {
   slidesPerView: 1,
   spaceBetween: 20,
-  speed: 800,
-
+  autoplay: {
+    delay: 1000,
+  },
+  speed: 1000,
+  
   breakpoints: {
     320: {
       slidesPerView: 'auto',
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-      }
     },
     768: {
       slidesPerView: 'auto',
       centeredSlides: true,
       freeMode: false,
-      autoplay: { 
-        delay: 1000,
-        disableOnInteraction: false,
-      }
     },
     1440: {
       slidesPerView: 5,
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-      }
     }
   },
 };
@@ -37,30 +28,21 @@ const heroSliderParams = {
 const defaultSliderParams = {
   slidesPerView: 1,
   spaceBetween: 20,
-  speed: 1000,
   allowTouchMove: true,
   autoplay: {
     delay: 3000,
   },
+  speed: 1000,
 
   breakpoints: {
     320: {
       slidesPerView: 1,
-      autoplay: {
-        delay: 3000,
-      }
     },
     768: {
       slidesPerView: 1,
-      autoplay: { 
-        delay: 3000,
-      },
     },
     1440: {
       slidesPerView: 3,
-      autoplay: {
-        delay: 3000,
-      },
       allowTouchMove: false,
     }
   },

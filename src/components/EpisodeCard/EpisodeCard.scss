@@ -1,4 +1,4 @@
-.episodes-card {
+.episode-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
@@ -34,12 +34,16 @@
     box-shadow: var(--shadow-m-pewter-blue);
   }
 
-  &__image {
+  &__media {
     position: relative;
     grid-area: image;
+  }
 
-    img {
-      border-radius: var(--border-radius-s);
+  &__image {
+    border-radius: var(--border-radius-s);
+
+    @include mobile-s {
+      width: 100%;
     }
   }
 
@@ -48,6 +52,11 @@
     top: 0;
     right: 0;
     padding: 10px;
+
+    @include tablet {
+      right: auto;
+      left: 0;
+    }
 
     .soc1als__list {
       gap: 6px;
@@ -112,7 +121,7 @@
       display: flex;
     }
 
-    &-image {
+    &-avatar {
       border-radius: 100%;
       border: var(--border-width-l) solid var(--color-white);
 

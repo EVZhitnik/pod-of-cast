@@ -112,6 +112,11 @@
   &--single-blog {
     padding-top: fluid(56, 40);
     padding-bottom: 45px;
+
+    .hero-major__tags {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__header {
@@ -185,7 +190,6 @@
     }
   }
 
-  &__tags,
   &__soc1als  {
     display: flex;
     justify-content: center;

@@ -1,24 +1,17 @@
+import './IconLink.scss';
 import classNames from 'classnames';
 
 const IconLink = (props) => {
   const {
     className,
     mode = '',
+    isLink = true,
     title,
     iconName,
     width,
     height,
     loading = 'lazy',
   } = props;
-
-  const sizeMap = {
-    app: { width: 36, height: 36 },
-  };
-
-  const { width: defaultWidth, height: defaultHeight } = sizeMap[mode] || {};
-
-  const iconWidth = width || defaultWidth;
-  const iconHeight = height || defaultHeight;
 
   const getClassNameImgIconLink = (mode) => {
     switch (mode) {
@@ -34,21 +27,32 @@ const IconLink = (props) => {
   };
 
   return (
-    <a
-      className={classNames(className)}
-      href="./"
-      title={title}
-      aria-label={title}
-    >
+    isLink ? (
+      <a
+        className={classNames(className)}
+        href="./"
+        title={title}
+        aria-label={title}
+      >
+        <img
+          className={getClassNameImgIconLink(mode)}
+          src={`./${iconName}.svg`}
+          alt={title}
+          width={width}
+          height={height}
+          loading={loading}
+        />
+      </a>
+    ) : (
       <img
         className={getClassNameImgIconLink(mode)}
-        src={`./src/assets/icons/${iconName}.svg`}
+        src={`./${iconName}.svg`}
         alt={title}
-        width={iconWidth}
-        height={iconHeight}
+        width={width}
+        height={height}
         loading={loading}
       />
-    </a>
+    )
   );
 };
 

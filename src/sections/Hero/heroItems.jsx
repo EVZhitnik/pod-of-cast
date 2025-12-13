@@ -16,21 +16,7 @@ const heroItems = {
     date: "Sep 12, 2021",
     subtitle: "Trips & Tricks",
     title: "Doodle Artwork 101",
-    tags: ["art", "tips and trick", "creative"],
-    socialsLinks: [
-      {
-        label: 'Twitter',
-        iconName: 'twitter',
-      },
-      {
-        label: 'Instagram',
-        iconName: 'instagram',
-      },
-      {
-        label: 'Tiktok',
-        iconName: 'tiktok',
-      },
-    ],    
+    tags: ["art", "tips and trick", "creative"],   
   },
 };
 

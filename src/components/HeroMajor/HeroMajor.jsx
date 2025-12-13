@@ -7,6 +7,7 @@ import { Image } from 'minista';
 import Tags from '@/components/Tags';
 import Socials from '@/components/Socials';
 import Icon from '@/components/Icon';
+import socialGroupsData from '@/constants/socialGroupsData';
 
 const HeroMajor = (props) => {
   const {
@@ -20,14 +21,13 @@ const HeroMajor = (props) => {
     title,
     description,
     tags = [],
-    socialsLinks = [],
   } = props;
 
   const getButtonsSectionHero = (label) => {
     const baseButton = (
       <Button 
         className="hero-major__link"
-        href="/subscribe"
+        href="./"
         label="Subscribe"
       />
     );
@@ -69,34 +69,12 @@ const HeroMajor = (props) => {
   };
 
   const getBodyHeroMajorPodcast = (label) => {
-    const heroCardData = [
-      {
-        title: 'Perplexed Mind',
-        socials: [
-          {
-            label: 'Google Podcast',
-            iconName: 'google-podcast-mini',
-          },
-          {
-            label: 'Spotify',
-            iconName: 'spotify-mini',
-          },
-          {
-            label: 'You Tube',
-            iconName: 'youtube-mini',
-          },
-        ],
-      },
-    ];
-
     const arrayTags = ['mind-behaviour', 'health'];
 
     return (
       <div className="hero-major__info container">
         <div className="hero-major__info-header">
-          {heroCardData.map((heroCardItems, index) => (
-            <HeroCard className="hero-major__card" {...heroCardItems} key={index}/>
-          ))}
+          <HeroCard className="hero-major__card" title="Perplexed Mind" />
           <div className="hero-major__content">
             <div className="hero-major__heading">
               <span className="hero-major__subtitle">Episode 1</span>
@@ -114,7 +92,7 @@ const HeroMajor = (props) => {
               <div className="hero-major__hosted-info">
                 <Image 
                   className='hero-major__hosted-avatar' 
-                  src="./src/assets/images/person/5.jpg"
+                  src="./src/assets/images/avatar/5.jpg"
                   alt="Avatar Jane Doe" 
                 />
                 <div className="hero-major__hosted-text">
@@ -154,7 +132,7 @@ const HeroMajor = (props) => {
         <Socials 
           className="hero-major__soc1als" 
           mode="soc1als-footer" 
-          links={socialsLinks}
+          links={socialGroupsData[0].footer}
         />
       </>
     );

@@ -2,9 +2,12 @@ import Section from '@/layouts/Section';
 import './News.scss';
 import BaseCard from '@/components/BaseCard';
 import Button from '@/components/Button';
-import dataBaseCard from '@/constants/dataBaseCard';
+import baseCardGroupsData from '@/constants/baseCardGroupsData';
 
 const News = () => {
+  const allSection = baseCardGroupsData[0].home.find(section => section.title === "All");
+  const baseCardData = allSection?.items?.slice(0, 2) || [];
+    
   return (
     <Section
       className="news"
@@ -15,7 +18,7 @@ const News = () => {
       <div className="news__card">
         <BaseCard 
           mode="news"
-          dataCard={dataBaseCard}
+          dataCard={baseCardData}
           isTitleTheLink={true}
         />
       </div>

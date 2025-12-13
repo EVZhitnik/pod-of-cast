@@ -1,4 +1,4 @@
-.subscription-card {
+.about-card {
   @include flex-center;
 
   flex-direction: column;
@@ -24,7 +24,7 @@
     letter-spacing: -0.02em;
     color: var(--color-vermillion);
 
-    span {
+    &-accent {
       color: var(--color-black);
     }
   }

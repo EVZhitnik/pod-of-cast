@@ -1,20 +1,11 @@
-import Section from '@/layouts/Section';
 import './Blog.scss';
 import classNames from 'classnames';
 import { Image } from 'minista';
 import Quote from '@/components/Quote';
+import quoteGroupsData from '@/constants/quoteGroupsData';
+import IconLink from '@/components/IconLink';
 
 const Blog = () => {
-  const quoteData = [
-    {
-      blockquote: "Quote example goes in here...",
-      image: './src/assets/images/person/1.jpg',
-      personName: 'John Smith,',
-      platformIconName: 'spotify-quote',
-      platform: 'Social Community Manager',
-    }
-  ];
-
   return (
     <section 
       className={classNames("blog", "section")}
@@ -31,10 +22,10 @@ const Blog = () => {
           <ul className="blog__info-list">
             <li className="blog__info-item">
               <p>
-                Lorem ipsum dolor sit amet, <span>consectetur adipiscing</span> elit. Quam pellentesque at bibendum euismod tellus duis cursus dignissim odio. Sit vulputate et integer in.
+                Lorem ipsum dolor sit amet, <span className="blog__text-accent">consectetur adipiscing</span> elit. Quam pellentesque at bibendum euismod tellus duis cursus dignissim odio. Sit vulputate et integer in.
               </p>
               <p>
-                Sit vel, senectus iaculis morbi. <span>Amet</span> interdum imperdiet laoreet <span>morbi</span> tincidunt fermentum, libero. Ante enim eget viverra at porttitor accumsan. <a href="./">Orci non here</a>
+                Sit vel, senectus iaculis morbi. <span className="blog__text-accent">Amet</span> interdum imperdiet laoreet <span className="blog__text-accent">morbi</span> tincidunt fermentum, libero. Ante enim eget viverra at porttitor accumsan. <a href="./">Orci non here</a>
               </p>
             </li>
             <li className="blog__info-item">
@@ -44,8 +35,8 @@ const Blog = () => {
             </li>
           </ul>
         </div>
-        {quoteData.map((items, index) => (
-          <Quote className="blog__quote" mode="intro" quote={items} key={index} />
+        {quoteGroupsData[0].blog.map((quoteGroupData, index) => (
+          <Quote className="blog__quote" mode="intro" quote={quoteGroupData} key={index} />
         ))}
         <div className="blog__text">
           <div className="blog__text-column">
@@ -53,17 +44,17 @@ const Blog = () => {
             <ul className="blog__text-list">
               <li className="blog__text-item blog__text-item--circle">
                 <p>
-                  Lorem ipsum dolor sit amet, <span>consectetur adipiscing</span> elit. Quam pellentesque at bibendum euismodtellus duis curs us dignissim odio. Sit vulputate et integer in.
+                  Lorem ipsum dolor sit amet, <span className="blog__text-accent">consectetur adipiscing</span> elit. Quam pellentesque at bibendum euismodtellus duis curs us dignissim odio. Sit vulputate et integer in.
                 </p>
               </li>
               <li className="blog__text-item blog__text-item--circle">
                 <p>
-                  Sit vel, senectus iaculis morbi. <span>Amet</span> interdum imperdiet laoreet <span>morbi</span> tincidunt fermentum, libero. Ante enim eget viverra at porttitor accumsan. <a href="./">Orci non here</a>
+                  Sit vel, senectus iaculis morbi. <span className="blog__text-accent">Amet</span> interdum imperdiet laoreet <span className="blog__text-accent">morbi</span> tincidunt fermentum, libero. Ante enim eget viverra at porttitor accumsan. <a href="./">Orci non here</a>
                 </p>
               </li>
               <li className="blog__text-item blog__text-item--circle">
                 <p>
-                  Quis dictum cursus faucibus mattis dignissim. Pellent que <span>purus in sed</span> sodales in mauris molestie. Eleifend est consctetur interdum eu in auctor. Gravida leo et.
+                  Quis dictum cursus faucibus mattis dignissim. Pellent que <span className="blog__text-accent">purus in sed</span> sodales in mauris molestie. Eleifend est consctetur interdum eu in auctor. Gravida leo et.
                 </p>
               </li>
             </ul>
@@ -73,17 +64,17 @@ const Blog = () => {
             <ol className="blog__text-list">
               <li className="blog__text-item blog__text-item--num">
                 <p>
-                  Lorem ipsum dolor sit amet, <span>consectetur adipiscing</span> elit. Quam pellentesque at bibendum euismodtellus duis curs us dignissim odio. Sit vulputate et integer in.
+                  Lorem ipsum dolor sit amet, <span className="blog__text-accent">consectetur adipiscing</span> elit. Quam pellentesque at bibendum euismodtellus duis curs us dignissim odio. Sit vulputate et integer in.
                 </p>
               </li>
               <li className="blog__text-item blog__text-item--num">
                 <p>
-                  Sit vel, senectus iaculis morbi. <span>Amet</span> interdum imperdiet laoreet <span>morbi</span> tincidunt fermentum, libero. Ante enim eget viverra at porttitor accumsan. <a href="./">Orci non here</a>
+                  Sit vel, senectus iaculis morbi. <span className="blog__text-accent">Amet</span> interdum imperdiet laoreet <span className="blog__text-accent">morbi</span> tincidunt fermentum, libero. Ante enim eget viverra at porttitor accumsan. <a href="./">Orci non here</a>
                 </p>
               </li>
               <li className="blog__text-item blog__text-item--num">
                 <p>
-                  Quis dictum cursus faucibus mattis dignissim. Pellent que <span>purus in sed</span> sodales in mauris molestie. Eleifend est consctetur interdum eu in auctor. Gravida leo et.
+                  Quis dictum cursus faucibus mattis dignissim. Pellent que <span className="blog__text-accent">purus in sed</span> sodales in mauris molestie. Eleifend est consctetur interdum eu in auctor. Gravida leo et.
                 </p>
               </li>
             </ol>
@@ -91,13 +82,27 @@ const Blog = () => {
         </div>
         <div className="blog__caption">
           <div className="blog__caption-column">
-            <Image className="blog__caption-image" src="./src/assets/icons/caption-image-1.svg" />
+            <IconLink 
+              mode="blog"
+              isLink={false}
+              title="Image caption №1"             
+              iconName="caption-image-1"
+              width={570}
+              height={400}
+            />
             <p className="blog__caption-text">
               this is an image with a caption example
             </p>
           </div>
           <div className="blog__caption-column">
-            <Image className="blog__caption-image" src="./src/assets/icons/caption-image-1.svg" />
+            <IconLink 
+              mode="blog"
+              isLink={false}
+              title="Image caption №1"             
+              iconName="caption-image-1"
+              width={570}
+              height={400}
+            />
             <p className="blog__caption-text">
               this is an image with a caption example
             </p>

@@ -2,53 +2,9 @@ import Section from '@/layouts/Section';
 import './Listeners.scss';
 import Slider from '@/components/Slider';
 import Quote from '@/components/Quote';
+import quoteGroupsData from '@/constants/quoteGroupsData';
 
 const Listeners = () => {
-  const quoteItems = [
-    {
-      blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
-      image: './src/assets/images/person/2.jpg',
-      personName: 'Luna lovegood,',
-      platformIconName: 'spotify-quote',
-      platform: 'Spotify',
-    },
-    {
-      blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
-      image: './src/assets/images/person/3.jpg',
-      personName: 'Emily Blunt,',
-      platformIconName: 'google-podcast-listeners',
-      platform: 'Google Podcast',
-    },
-    {
-      blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
-      image: './src/assets/images/person/4.jpg',
-      personName: 'Mia Winters,',
-      platformIconName: 'apple-podcast-listeners',
-      platform: 'Apple Podcast',
-    },
-    {
-      blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
-      image: './src/assets/images/person/2.jpg',
-      personName: 'Luna lovegood,',
-      platformIconName: 'spotify-quote',
-      platform: 'Spotify',
-    },
-    {
-      blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
-      image: './src/assets/images/person/3.jpg',
-      personName: 'Emily Blunt,',
-      platformIconName: 'google-podcast-listeners',
-      platform: 'Google Podcast',
-    },
-    {
-      blockquote: 'Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. ',
-      image: './src/assets/images/person/4.jpg',
-      personName: 'Mia Winters,',
-      platformIconName: 'apple-podcast-listeners',
-      platform: 'Apple Podcast',
-    },
-  ];
-  
   return (
     <Section
       className="listeners"
@@ -59,13 +15,13 @@ const Listeners = () => {
       description="Their experience throughout every platform"
     >
       <Slider mode="listeners" labelSliderParams="default">
-        {quoteItems.map((quoteData, index) => (
+        {quoteGroupsData[0].listeners.map((quoteGroupData, index) => (
           <Quote 
             className="listeners__quote"
             mode="listeners" 
-            quote={quoteData} 
+            quote={quoteGroupData} 
             key={index} 
-        />
+          />
         ))}
       </Slider>
     </Section>

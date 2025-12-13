@@ -1,6 +1,6 @@
 import Pod from "@/sections/Pod";
 import Benefits from "@/sections/Benefits";
-import Episodes from "@/sections/Episodes";
+import RecentEpisodes from "@/sections/RecentEpisodes";
 import Hero from "@/sections/Hero";
 import Intro from "@/sections/Intro";
 import Listeners from "@/sections/Listeners";
@@ -9,7 +9,7 @@ import Sponsor from "@/sections/Sponsor";
 
 export const metadata = {
   title: 'Home',
-}
+};
 
 export default () => {
   return (
@@ -18,10 +18,10 @@ export default () => {
       <Intro />
       <Listeners />
       <Benefits />
-      <Episodes />
+      <RecentEpisodes />
       <Sponsor />
       <News />
       <Pod />
     </>
   )
-}
+};

@@ -2,11 +2,12 @@ import Logo from '@/components/Logo';
 import './Footer.scss';
 import Socials from '@/components/Socials';
 import Platforms from '@/components/Platforms';
-import AppLinks from '@/components/App';
-import itemsPlatforms from '@/constants/itemsPlatforms';
+import App from '@/components/App';
+import socialGroupsData from '@/constants/socialGroupsData';
+import platformGroupsData from '@/constants/platformGroupsData';
 
 const Footer = () => {
-  const itemsMenu = [
+  const menuData = [
     [
       {
         label: 'About',
@@ -37,32 +38,6 @@ const Footer = () => {
     ],
   ];
 
-  const itemsSocials = [
-    {
-      label: 'Twitter',
-      iconName: 'twitter',
-    },
-    {
-      label: 'Instagram',
-      iconName: 'instagram',
-    },
-    {
-      label: 'Tiktok',
-      iconName: 'tiktok',
-    },
-  ];
-
-  const itemsApp = [
-    {
-      label: 'App Store',
-      iconName: 'app-store',
-    },
-    {
-      label: 'Google Play',
-      iconName: 'google-play',
-    },
-  ];
-
   const extraLinks = ['Terms', 'Privacy'];
 
   return (
@@ -84,13 +59,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer__info-item">
-              <Socials className="footer__soc1als" mode="soc1als-footer" links={itemsSocials}/>
+              <Socials className="footer__soc1als" mode="soc1als-footer" links={socialGroupsData[0].footer}/>
             </div>
           </div>
           <nav className="footer__menu">
-            {itemsMenu.map((column, columnIndex) => (
-              <div className="footer__menu-column" key={columnIndex}>
-                {column.map(({ label, href }, linkIndex) => (
+            {menuData.map((items, index) => (
+              <div className="footer__menu-column" key={index}>
+                {items.map(({ label, href }, linkIndex) => (
                   <a className="footer__menu-link" href={href} key={linkIndex}>{label}</a>
                 ))}
               </div>
@@ -103,7 +78,7 @@ const Footer = () => {
                   Listen to episodes on your fav platform:
                 </p>
               </div>
-              <Platforms className="footer__platforms-links" mode="footer" links={itemsPlatforms}/>              
+              <Platforms className="footer__actions-platforms-links" mode="footer" links={platformGroupsData[0].platforms}/>              
             </div>
             <div className="footer__actions-app">
                 <div className="footer__actions-app-text">
@@ -111,7 +86,7 @@ const Footer = () => {
                     App available on:
                   </p>
                 </div>
-                <AppLinks className="footer__app-links" links={itemsApp} />
+                <App className="footer__actions-app-links"/>
             </div>
           </div>
         </div>

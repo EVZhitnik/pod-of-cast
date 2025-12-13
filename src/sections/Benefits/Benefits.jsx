@@ -1,37 +1,43 @@
 import Section from '@/layouts/Section';
 import './Benefits.scss';
-import { Image } from 'minista';
+import IconLink from '@/components/IconLink';
 import Button from '@/components/Button';
 
 const Benefits = () => {
-  const benefitsItems = [
+  const benefitsData = [
     {
-      imgSrc: './src/assets/icons/topic.svg',
+      label: "Icon Topic by Request",
+      iconName: "topic",
       title: "Topic by Request",
       description: "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.",
     },
     {
-      imgSrc: './src/assets/icons/content.svg',
+      label: "Icon Exclusive Content",
+      iconName: "content",
       title: "Exclusive Content",
       description: "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.",
     },
     {
-      imgSrc: './src/assets/icons/join.svg',
+      label: "Icon Join the Community",
+      iconName: "join",
       title: "Join the Community",
       description: "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.",
     },
     {
-      imgSrc: './src/assets/icons/access.svg',
+      label: "Icon Livestreaming Access",
+      iconName: "access",
       title: "Livestreaming Access",
       description: "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.",
     },
     {
-      imgSrc: './src/assets/icons/merch.svg',
+      label: "Icon Exclusive Episodes & Merch",
+      iconName: "merch",
       title: "Exclusive Episodes & Merch",
       description: "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.",
     },
     {
-      imgSrc: './src/assets/icons/much.svg',
+      label: "Icon And much more!",
+      iconName: "much",
       title: "And much more!",
       description: "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.",
     },
@@ -46,9 +52,17 @@ const Benefits = () => {
       description="Become our sponsor and get all benefits"
     >
       <ul className="benefits__list">
-        {benefitsItems.map(({ imgSrc, title, description }, index) => (
+        {benefitsData.map(({ label, iconName, title, description }, index) => (
           <li className="benefits__item" key={index}>
-            <Image className='benefits__image' src={imgSrc} alt={`Icon for ${title}`} />
+            <IconLink 
+              mode="benefits"
+              isLink={false}
+              title={label}              
+              iconName={iconName}
+              width={78}
+              height={78}
+              key={index}                      
+            />
             <h3 className="benefits__title h4">{title}</h3>
             <div className="benefits__description">
               <p>{description}</p>

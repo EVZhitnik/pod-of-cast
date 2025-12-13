@@ -13,7 +13,7 @@
     align-items: center;
     column-gap: 10px;
 
-    &-image {
+    &-avatar {
       border-radius: 50%;
     }
 
@@ -21,7 +21,7 @@
       font-size: 14px;
     }
 
-    &-platform {
+    &-text {
       font-weight: 700;
       font-size: 14px;
     }
@@ -30,6 +30,7 @@
   &--intro {
     @include flex-center;
 
+    flex-direction: column;
     position: relative;
     background-color: var(--color-champagne);
     border-radius: var(--border-radius-s);

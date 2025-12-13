@@ -97,9 +97,9 @@ const Sponsor = () => {
               <div className="sponsor-card__benefits">
                 <span className="sponsor-card__benefits-subtitle">{subtitle}</span>
                 <ul className="sponsor-card__benefits-list">
-                  {arrayBenefits.map((item, index) => (
+                  {arrayBenefits.map((items, index) => (
                     <li className="sponsor-card__benefits-item" key={index}>
-                      <p className="sponsor-card__benefits-text">{item}</p>
+                      <p className="sponsor-card__benefits-text">{items}</p>
                     </li>
                   ))}
                 </ul>

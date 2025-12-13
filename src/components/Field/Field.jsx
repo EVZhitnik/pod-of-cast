@@ -25,7 +25,7 @@ const Field = (props) => {
   return (
     <div className={classNames(className, "field")} >
       <label className="field__label" htmlFor={id}>
-        {label} {isRequired && (
+        {label}{isRequired && (
           <span className="field__required-star" aria-hidden={true}>*</span>
         )}
       </label>

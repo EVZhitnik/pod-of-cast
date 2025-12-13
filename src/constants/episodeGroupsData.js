@@ -1,4 +1,4 @@
-const latestEpisodeGroups = [
+const episodeGroupsData = [
   {
     title: "All",
     isActive: true,
@@ -8,11 +8,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -20,11 +21,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -32,11 +34,12 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -44,11 +47,12 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -56,23 +60,25 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
     ],
@@ -85,11 +91,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -97,11 +104,12 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -109,11 +117,12 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -121,23 +130,25 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -145,11 +156,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },      
     ],
@@ -162,11 +174,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -174,11 +187,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -186,23 +200,25 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -210,11 +226,12 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -222,11 +239,12 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },      
     ],
@@ -239,11 +257,12 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -251,23 +270,25 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -275,11 +296,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -287,11 +309,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -299,11 +322,12 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },      
     ],
@@ -316,11 +340,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -328,11 +353,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -340,23 +366,25 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
             {
@@ -364,11 +392,12 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -376,11 +405,12 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },      
     ],
@@ -393,11 +423,12 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -405,11 +436,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -417,11 +449,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -429,11 +462,12 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -441,23 +475,25 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },      
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
     ],
@@ -470,11 +506,12 @@ const latestEpisodeGroups = [
         tags: ['automation', 'tech'],
         number: 'Eps. 5',
         title: 'Tesla Autopilot Controversy',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -482,23 +519,25 @@ const latestEpisodeGroups = [
         tags: ['women’s rights'],
         number: 'Eps. 4',
         title: "Women's Rights? Is it alright?",
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
         imgSrc: './src/assets/images/episodes-card/6.jpg',
         tags: ['mind-behaviour', 'health'],
         number: 'Eps. 1',
-        title: 'Are you a Perplexed Mind Person?',
+        title: 'Are you a Perplexed Mind avatar?',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
             {
@@ -506,11 +545,12 @@ const latestEpisodeGroups = [
         tags: ['self-esteem', 'health'],
         number: 'Eps. 3',
         title: 'How to Deal with Self–Confidence',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -518,11 +558,12 @@ const latestEpisodeGroups = [
         tags: ['covid-19', 'health'],
         number: 'Eps. 6',
         title: 'Pandemic Becoming Endemic',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
       {
@@ -530,15 +571,16 @@ const latestEpisodeGroups = [
         tags: ['social class', 'social class'],
         number: 'Eps. 2',
         title: 'Type of Social Classes of People',
+        href: './podcast',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.',
         hosted: 'Hosted by: ',
-        imgPersonSrc: [
-          './src/assets/images/person/5.jpg',
-          './src/assets/images/person/6.jpg',
+        avatarSrc: [
+          './src/assets/images/avatar/5.jpg',
+          './src/assets/images/avatar/6.jpg',
         ],
       },
     ],
   },
 ];
 
-export default latestEpisodeGroups;
+export default episodeGroupsData;

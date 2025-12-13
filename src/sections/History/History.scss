@@ -45,11 +45,11 @@
   &__item {
     color: var(--color-davys-grey);
 
-    span {
+    &-text-accent {
       font-weight: 700;
       color: var(--color-black);
     }
-
+    
     a {
       color: var(--color-black);
 

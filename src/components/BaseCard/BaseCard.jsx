@@ -3,6 +3,7 @@ import './BaseCard.scss';
 import { Image } from 'minista';
 import IconLink from '@/components/IconLink';
 import Tags from '../Tags';
+import socialGroupsData from '@/constants/socialGroupsData';
 
 const BaseCard = (props) => {
   const {
@@ -12,21 +13,6 @@ const BaseCard = (props) => {
     isSubscription = false,
   } = props;
 
-  const socialsData = [
-    {
-      label: "Tiktok",
-      iconName: "tiktok-base-card",
-    },
-    {
-      label: "Twitter",
-      iconName: "twitter-base-card",
-    },
-    {
-      label: "Instagram",
-      iconName: "instagram-base-card",
-    },
-  ];
-
   return (
     <>
       {dataCard.map((dataCardItems, index) => {
@@ -34,6 +20,7 @@ const BaseCard = (props) => {
           imgSrc,
           subtitle,
           title,
+          href,
           description,
           tags = [],
           date,
@@ -59,7 +46,7 @@ const BaseCard = (props) => {
                 <span className="base-card__subtitle">{subtitle}</span>
                 {isTitleTheLink ? (
                   <h3 className="base-card__title">
-                    <a className="base-card__link" href="./">{title}</a>
+                    <a className="base-card__link" href={href}>{title}</a>
                   </h3>
                 ) : (
                   <h3 className="base-card__title">{title}</h3>
@@ -70,7 +57,7 @@ const BaseCard = (props) => {
                 <div className="base-card__subscription">
                   <span className="base-card__subscription-text">{sub}</span>
                   <div className="base-card__subscription-soc1als">
-                    {socialsData.map(({ label, iconName }, index) => (
+                    {socialGroupsData[0].baseCard.map(({ label, iconName }, index) => (
                       <IconLink 
                         className="base-card__subscription-soc1als-link"
                         mode="base-card"
@@ -85,10 +72,7 @@ const BaseCard = (props) => {
                 </div>
               ) : (
                 <div className="base-card__meta">
-                  <Tags 
-                    className="base-card__meta-tags"
-                    items={tags}
-                  />
+                  <Tags className="base-card__meta-tags" items={tags}/>
                   <div className="base-card__meta-date">{date}</div>
                 </div>
               )}

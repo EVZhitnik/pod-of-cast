@@ -1,8 +1,8 @@
 import Section from '@/layouts/Section';
 import './LatestEpisode.scss';
 import Tabs from '@/components/Tabs';
-import latestEpisodeGroups from './latestEpisodeGroups';
-import EpisodesCard from '@/components/EpisodesCard';
+import episodeGroupsData from '@/constants/episodeGroupsData';
+import EpisodesCard from '@/components/EpisodeCard';
 
 const LatestEpisode = () => {
   const tabsTitle = "latest-episode-tabs";
@@ -18,12 +18,12 @@ const LatestEpisode = () => {
       <Tabs
         className="latest-episode__tabs"
         title={tabsTitle}
-        items={latestEpisodeGroups.map((latestEpisodeGroup) => ({
-          title: latestEpisodeGroup.title,
-          isActive: latestEpisodeGroup.isActive,
+        items={episodeGroupsData.map((episodeGroupData) => ({
+          title: episodeGroupData.title,
+          isActive: episodeGroupData.isActive,
           children: (
             <>
-              <EpisodesCard dataCard={latestEpisodeGroup.items}/>
+              <EpisodesCard dataCard={episodeGroupData.items}/>
             </>
           )
         }))}

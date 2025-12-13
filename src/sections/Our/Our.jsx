@@ -8,32 +8,32 @@ const Our = () => {
     { 
       label: 'Google Podcasts',
       iconName: 'google-podcasts',
-      description: <>Quis dictum cursus faucibus mattis <span>dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
+      description: <>Quis dictum cursus faucibus mattis <span className="our__card-description-accent">dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
     },
     {
       label: 'Spotify',
       iconName: 'spotify',
-      description: <>Quis dictum cursus faucibus mattis <span>dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
+      description: <>Quis dictum cursus faucibus mattis <span className="our__card-description-accent">dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
     },
     {
       label: 'YouTube',
       iconName: 'youtube',
-      description: <>Quis dictum cursus faucibus mattis <span>dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
+      description: <>Quis dictum cursus faucibus mattis <span className="our__card-description-accent">dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
     },
     { 
       label: 'Google Podcasts',
       iconName: 'google-podcasts',
-      description: <>Quis dictum cursus faucibus mattis <span>dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
+      description: <>Quis dictum cursus faucibus mattis <span className="our__card-description-accent">dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
     },
     {
       label: 'Spotify',
       iconName: 'spotify',
-      description: <>Quis dictum cursus faucibus mattis <span>dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
+      description: <>Quis dictum cursus faucibus mattis <span className="our__card-description-accent">dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
     },
     {
       label: 'YouTube',
       iconName: 'youtube',
-      description: <>Quis dictum cursus faucibus mattis <span>dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
+      description: <>Quis dictum cursus faucibus mattis <span className="our__card-description-accent">dignissim</span>. Pellentes que purus in sed sodales in mauris molestie. Eleifend estcon sctetur interdum eu in auctor. Gravida leo et.</>
     },
   ];
 
