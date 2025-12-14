@@ -8,7 +8,7 @@
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  animation-range: 0 150px;
+  animation-range: 200px 300px;
   
   @keyframes scrolling-header {
     to {

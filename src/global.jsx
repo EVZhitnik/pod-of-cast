@@ -1,8 +1,8 @@
-import "@/styles"
-import Content from "@/layouts/Content"
-import Footer from "@/layouts/Footer"
-import Header from "@/layouts/Header"
-import { Head } from "minista"
+import "@/styles";
+import Content from "@/layouts/Content";
+import Footer from "@/layouts/Footer";
+import Header from "@/layouts/Header";
+import { Head } from "minista";
 
 export default (props) => {
   const {
@@ -27,5 +27,5 @@ export default (props) => {
       </Content>
       <Footer/>
     </>
-  )
+  );
 }
