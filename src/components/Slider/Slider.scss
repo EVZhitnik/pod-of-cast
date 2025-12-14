@@ -10,23 +10,15 @@
   }
 
   &__list {
-    height: 390px;
-
-    @include mobile-s {
-      height: 33vh;
-    }
+    height: fluid(390, 315);
   }
 
   &__item {
     &--hero {
-      @include square(373px);
-
+      width: fluid(373, 300);
+      height: fluid(373, 300);
       border-radius: var(--border-radius-m);
       box-shadow: var(--shadow-l-pewter-blue);
-
-      @include mobile-s {
-        @include square(300px);
-      }
 
       &:nth-child(1) {
         background: url('../../assets/images/hero-card/1.jpg') center/cover no-repeat;
